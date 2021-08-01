@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:padding="10dp"
+android:orientation="vertical"
+android:background="#FFFFFF"
+tools:context=".AdminAdmissionModifyPatientNotesPage"
+android:layout_gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center_horizontal"
+        android:text="Modify Patient Notes"
+        android:textColor="#3F4775"
+        android:textSize="50dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/patientHistoryModify"
+        android:layout_width="match_parent"
+        android:layout_height="236dp"
+        android:layout_marginTop="10dp"
+        android:hint="This is for notes..."
+        android:padding="10dp"
+        android:textColorHint="@color/cardview_dark_background"
+        android:background="@drawable/edittextbackground"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/modifyNotes"
+        android:textColor="@color/cardview_light_background"
+        android:background="@color/cardview_dark_background"
+        android:onClick="ModifyPatientNotes"
+        android:text="Modify"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"
+        app:backgroundTint="#3F4775"
+    />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:textColor="@color/cardview_light_background"
+        android:background="@color/cardview_dark_background"
+        android:onClick="DeletePatientNotes"
+        android:text="Delete"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"
+        app:backgroundTint="#3F4775"
+    />
+
+    <Button
+        android:id="@+id/backButton"
+        android:textColor="@color/cardview_light_background"
+        android:background="@color/cardview_dark_background"
+        android:onClick="gobackbutton"
+        android:text="Back"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"
+        app:backgroundTint="#3F4775"
+        />
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_admin"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@android:color/white"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu_admin" />
+</LinearLayout>
+</ScrollView>

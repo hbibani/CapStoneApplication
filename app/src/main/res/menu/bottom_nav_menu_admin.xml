@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_home_admin"
+        android:enabled="true"
+        android:title="Home"
+        android:onClick="onClickNavigation"
+        />
+
+    <item
+        android:id="@+id/action_logout_admin"
+        android:enabled="true"
+        android:title="Logout"
+        android:onClick="onClickNavigation"
+        />
+</menu>

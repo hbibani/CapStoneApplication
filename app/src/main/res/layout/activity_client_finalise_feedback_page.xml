@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".ClientFinaliseFeedbackPage"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center_horizontal"
+        android:text="Feedback"
+        android:textColor="#3F4775"
+        android:textSize="50dp"
+        android:textStyle="bold" />
+
+    <Switch
+        android:id="@+id/question1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Question 1: "
+        android:text="Do you think your pain at attended to by the staff an acceptable time frame? "
+        android:textSize="20dp"
+        />
+
+    <Switch
+        android:id="@+id/question2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Question 2: "
+        android:text="Do you think pain relief in acceptable time frame? "
+        android:textSize="20dp" />
+
+    <Switch
+        android:id="@+id/question3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Question 3: "
+        android:text="Do you think the pain relief that you were given was adequate? "
+        android:textSize="20dp" />
+
+
+    <Switch
+        android:id="@+id/question4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Question 4: "
+        android:text="Do you think the staff understood your pain related concern well? "
+        android:textSize="20dp" />
+
+
+    <Switch
+        android:id="@+id/question5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Question 5: "
+        android:text="Do you find your overall experience with the pain management in the ED satisfactory or unsatisfactory? "
+        android:textSize="20dp" />
+
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Add Feedback"
+        android:onClick="addfeedBack"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"
+        app:backgroundTint="#3F4775"
+        />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:onClick="Back"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"
+        app:backgroundTint="#3F4775"
+        />
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_client"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu_client" />
+
+</LinearLayout>

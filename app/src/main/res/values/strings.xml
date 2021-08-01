@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FinalAssignment</string>
+    <string-array name="Gender_Array">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+</resources>

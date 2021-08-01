@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".AdminPatientPage"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center_horizontal"
+        android:text="Admin Patient"
+        android:textColor="#3F4775"
+        android:textSize="50dp"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/patient_mrn_number"
+        android:hint="Medical Record Number..."
+        android:textSize="10dp"
+        android:textColorHint="@color/cardview_dark_background"
+        android:background="@drawable/edittextbackground"
+        android:layout_marginBottom="10dp"
+        android:layout_height="35dp"
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        />
+
+    <Spinner
+        android:id="@+id/editGender"
+        android:hint="Gender"
+        android:textSize="10dp"
+        android:textColorHint="@color/cardview_dark_background"
+        android:background="@drawable/edittextbackground"
+        android:layout_marginBottom="10dp"
+        android:layout_height="35dp"
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        />
+
+    <EditText
+        android:id="@+id/editAge"
+        android:hint="Enter Age..."
+        android:textSize="10dp"
+        android:textColorHint="@color/cardview_dark_background"
+        android:background="@drawable/edittextbackground"
+        android:layout_marginBottom="10dp"
+        android:layout_height="35dp"
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        />
+
+
+    <EditText
+        android:id="@+id/editWeight"
+        android:hint="Enter Weight..."
+        android:textSize="10dp"
+        android:textColorHint="@color/cardview_dark_background"
+        android:background="@drawable/edittextbackground"
+        android:layout_marginBottom="10dp"
+        android:layout_height="35dp"
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        />
+
+    <EditText
+        android:id="@+id/username_client"
+        android:hint="Username..."
+        android:textSize="10dp"
+        android:textColorHint="@color/cardview_dark_background"
+        android:background="@drawable/edittextbackground"
+        android:layout_marginBottom="10dp"
+        android:layout_height="35dp"
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        />
+
+    <EditText
+        android:id="@+id/password_client"
+        android:hint="Password..."
+        android:textSize="10dp"
+        android:textColorHint="@color/cardview_dark_background"
+        android:background="@drawable/edittextbackground"
+        android:layout_marginBottom="10dp"
+        android:layout_height="35dp"
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"
+        android:background="@color/cardview_dark_background"
+        android:onClick="addPatientButton"
+        android:text="Add Patient"
+        android:layout_marginBottom="10sp"
+        android:textColor="@color/cardview_light_background"
+        app:backgroundTint="#3F4775"/>
+
+    <EditText
+        android:id="@+id/search_client"
+        android:hint="Medication Record Number (MRN)"
+        android:textSize="10dp"
+        android:textColorHint="@color/cardview_dark_background"
+        android:background="@drawable/edittextbackground"
+        android:layout_marginBottom="10dp"
+        android:layout_height="35dp"
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="10sp"
+        android:background="@color/cardview_dark_background"
+        android:onClick="searchPatientButton"
+        android:text="Search"
+        android:textColor="@color/cardview_light_background"
+        app:backgroundTint="#3F4775"/>
+
+    <ListView
+        android:id="@+id/listview1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColorHint="@color/cardview_dark_background"
+        android:background="@drawable/edittextbackground"
+        />
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_admin"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@android:color/white"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu_admin" />
+</LinearLayout>
+</ScrollView>

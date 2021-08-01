@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".AdminHomePage"
+    android:layout_gravity="center"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center_horizontal"
+        android:text="Admin Home"
+        android:textColor="#3F4775"
+        android:textSize="50dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello, welcome go to the navigation below to add, remove, modify an entry."
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/modify_patient"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="+/- Patient"
+        android:onClick="onClickPatient"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"
+        app:backgroundTint="#3F4775"
+        />
+
+    <Button
+        android:id="@+id/modify_clinician"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="+/- Clinician"
+        android:onClick="onClickClinician"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"
+        app:backgroundTint="#3F4775"
+        />
+
+    <Button
+        android:id="@+id/modify_medication"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="+/- Medication"
+        android:onClick="onClickMedication"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"
+        app:backgroundTint="#3F4775"
+        />
+
+    <Button
+        android:id="@+id/modify_admission"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="+/- Admission"
+        android:onClick="onClickAdmission"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"
+        app:backgroundTint="#3F4775"
+        />
+
+    <Button
+        android:id="@+id/modify_role"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="+/- Role"
+        android:onClick="onClickRole"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"
+        app:backgroundTint="#3F4775"
+        />
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_admin"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@android:color/white"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu_admin" />
+</LinearLayout>
