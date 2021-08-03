@@ -22,7 +22,7 @@
         android:textSize="50dp"
         android:textStyle="bold" />
 
-    <Spinner
+    <EditText
         android:id="@+id/medication_brand"
         android:hint="Medication Brand"
         android:textSize="10dp"

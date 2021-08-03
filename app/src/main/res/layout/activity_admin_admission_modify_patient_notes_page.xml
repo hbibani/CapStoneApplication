@@ -26,15 +26,17 @@ android:layout_gravity="center">
         android:textSize="50dp"
         android:textStyle="bold" />
 
-    <TextView
+    <EditText
         android:id="@+id/patientHistoryModify"
         android:layout_width="match_parent"
         android:layout_height="236dp"
         android:layout_marginTop="10dp"
         android:hint="This is for notes..."
         android:padding="10dp"
-        android:textColorHint="@color/cardview_dark_background"
-        android:background="@drawable/edittextbackground"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:background="@drawable/border"
         android:layout_marginBottom="10dp"/>
 
     <Button

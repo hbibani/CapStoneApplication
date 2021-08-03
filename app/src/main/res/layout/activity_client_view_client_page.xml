@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="MergeRootFrame" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,6 +25,7 @@
             android:textSize="50dp"
             android:textStyle="bold" />
 
+
         <TextView
             android:id="@+id/graph"
             android:layout_width="match_parent"
@@ -34,7 +36,6 @@
             android:hint="This is for graph area..."
             android:padding="10dp"
             android:textColorHint="@color/cardview_dark_background" />
-
 
         <TextView
             android:id="@+id/textView"
@@ -55,8 +56,6 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_marginTop="10dp"
-            android:background="@drawable/spinner_border"
-            app:backgroundTint="#DCDCDC"
 
             />
 
@@ -80,9 +79,7 @@
             android:layout_below="@+id/btn_add"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_marginTop="10dp"
-            app:backgroundTint="#DCDCDC"
-            android:background="@drawable/spinner_border" />
+            android:layout_marginTop="10dp" />
 
         <Button
             android:id="@+id/addClinicianButton"
@@ -97,16 +94,15 @@
             android:textColor="@color/cardview_light_background"
             app:backgroundTint="#3F4775" />
 
-        <TextView
-            android:id="@+id/patientHistory"
-            android:layout_width="match_parent"
-            android:layout_height="236dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/edittextbackground"
-            android:hint="This is for notes..."
-            android:padding="10dp"
-            android:textColorHint="@color/cardview_dark_background" />
+        <EditText
+            android:id="@+id/notestoadd"
+            android:layout_width="392dp"
+            android:layout_height="109dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:background="@drawable/border"
+          />
 
         <Button
             android:id="@+id/addNotes"
@@ -116,9 +112,9 @@
             android:layout_marginTop="20sp"
             android:layout_marginBottom="20sp"
             android:background="@color/cardview_dark_background"
+            android:textColor="@color/cardview_light_background"
             android:onClick="AddClientNotes"
             android:text="Add Notes"
-            android:textColor="@color/cardview_light_background"
             app:backgroundTint="#3F4775" />
 
         <TextView
@@ -154,6 +150,39 @@
             />
 
         <TextView
+            android:id="@+id/clin_info"
+            android:layout_width="149dp"
+            android:layout_height="wrap_content"
+            android:text="Assigned Clinicians"
+            android:textColor="#0B0B0B"
+            android:textSize="20dp" />
+
+        <ListView
+            android:id="@+id/clinician_list"
+            android:layout_width="wrap_content"
+            android:layout_height="199dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:fadeScrollbars="true"
+            android:scrollbarStyle="insideOverlay"
+            android:scrollbarThumbHorizontal="?android:attr/fastScrollThumbDrawable"
+            android:textColorHint="@color/cardview_dark_background"
+            android:background="@drawable/edittextbackground"/>
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5sp"
+            android:background="@color/cardview_dark_background"
+            android:onClick="clincianlistpage"
+            android:text="View Notes Page"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/cardview_light_background"
+            app:backgroundTint="#3F4775"/>
+
+        <TextView
             android:id="@+id/patient_notes"
             android:layout_width="149dp"
             android:layout_height="wrap_content"
@@ -165,10 +194,15 @@
             android:id="@+id/patient_notes_list"
             android:layout_width="wrap_content"
             android:layout_height="199dp"
+            android:layout_gravity="center_horizontal|bottom"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
+            android:fadeScrollbars="true"
+            android:scrollbarStyle="insideOverlay"
+            android:scrollbarThumbHorizontal="?android:attr/fastScrollThumbDrawable"
             android:textColorHint="@color/cardview_dark_background"
             android:background="@drawable/edittextbackground"/>
+
 
         <Button
             android:layout_width="300dp"

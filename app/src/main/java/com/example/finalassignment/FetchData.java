@@ -1,5 +1,9 @@
 package com.example.finalassignment;
 
+import android.os.AsyncTask;
+
+import org.json.JSONArray;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,7 +15,7 @@ public class FetchData extends Thread
 {
     public String url;
     String data = "Empty";
-
+    JSONArray result;
     public FetchData(String url)
     {
         this.url = url;

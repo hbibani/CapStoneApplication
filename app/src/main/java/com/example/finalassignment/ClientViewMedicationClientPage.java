@@ -5,13 +5,28 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Toast;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class ClientViewMedicationClientPage extends AppCompatActivity
 {
     SharedPreferences pref;
+    String medicationstayID;
+    EditText medicationdisplay;
+    String medbrand;
+    String mrn;
+    String admissionid;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -19,10 +34,17 @@ public class ClientViewMedicationClientPage extends AppCompatActivity
         pref = this.getSharedPreferences("NewsTweetSettings", 0);
         String s = pref.getString("Type",null);
         String s1 = "Role: '2'";
+
         if(s.equals(s1) ==  true)
         {
             setContentView(R.layout.activity_client_view_medication_client_page);
-            Toast.makeText(ClientViewMedicationClientPage.this, pref.getString("Type",null), Toast.LENGTH_SHORT).show();
+            medicationdisplay = (EditText) findViewById(R.id.medication_brand);
+            Intent intent = getIntent();
+            medicationstayID = intent.getStringExtra("MedicationStayID");
+            mrn = intent.getStringExtra("mrn");
+            admissionid = intent.getStringExtra("admissionid");
+            fetchMedication();
+            medicationdisplay.setText(medbrand);
         }
         else
         {
@@ -31,6 +53,68 @@ public class ClientViewMedicationClientPage extends AppCompatActivity
         }
 
     }
+
+    public void fetchMedication()
+    {
+        String[] field = new String[1];
+        field[0] = "medicationstayid";
+
+        //Creating array for data
+        String[] data = new String[1];
+        data[0] = medicationstayID;
+
+        PutData putData = new PutData("http://pxassignment123.atwebpages.com/clingetsinglemed.php", "POST", field, data);
+
+        if (putData.startPut())
+        {
+            if (putData.onComplete())
+            {
+                String result = putData.getResult();
+                try
+                {
+                    JSONArray array = new JSONArray(result);
+                    JSONObject names = array.getJSONObject(0);
+                    medbrand = names.getString("MedBrand");
+                    medbrand = medbrand + " " + names.getString("Dosage");
+                    medbrand = medbrand + " " + names.getString("DoseForm");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    public void delMedication()
+    {
+        String[] field = new String[1];
+        field[0] = "medicationstayid";
+
+        //Creating array for data
+        String[] data = new String[1];
+        data[0] = medicationstayID;
+
+        PutData putData = new PutData("http://pxassignment123.atwebpages.com/deletemedfromadmission.php", "POST", field, data);
+
+        if (putData.startPut())
+        {
+            if (putData.onComplete()) {
+                String result = putData.getResult();
+                if (result.equals("Deleted"))
+                {
+                    Intent intent1 = new Intent(this, ClientViewClientPage.class);
+                    intent1.putExtra("mrn", mrn);
+                    intent1.putExtra("admissionid", admissionid);
+                    startActivity(intent1);
+                }
+                else
+                {
+                    startActivity(new Intent(ClientViewMedicationClientPage.this, ClientViewClientPage.class));
+                    Toast.makeText(ClientViewMedicationClientPage.this, "Error.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }
+    }
+
 
     public void onClickNavigation(MenuItem item)
     {
@@ -60,13 +144,16 @@ public class ClientViewMedicationClientPage extends AppCompatActivity
 
     public void DeleteMedButton(View view)
     {
-        startActivity(new Intent(ClientViewMedicationClientPage.this, ClientViewClientPage.class));
+        delMedication();
     }
 
     public void goBackButton(View view)
     {
-        startActivity(new Intent(ClientViewMedicationClientPage.this, ClientViewClientPage.class));
-    }
+        Intent intent1 = new Intent(this, ClientViewClientPage.class);
+        intent1.putExtra("mrn", mrn);
+        intent1.putExtra("admissionid", admissionid);
+        startActivity(intent1);
 
+    }
 
 }

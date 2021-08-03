@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,8 +8,7 @@
     android:padding="10dp"
     android:background="#FFFFFF"
     android:orientation="vertical"
-    tools:context=".ClientHomePage"
-    android:layout_gravity="center"
+    tools:context=".ClientViewClinicianClientPage"
     >
 
     <TextView
@@ -17,39 +17,44 @@
         android:layout_marginTop="40dp"
         android:layout_marginBottom="50dp"
         android:gravity="center_horizontal"
-        android:text="Clinician Home"
+        android:text="Clinician"
         android:textColor="#3F4775"
         android:textSize="50dp"
         android:textStyle="bold" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Active Patients: "
-        android:textColor="#3F4775"
-        android:textSize="20dp" />
 
-    <ListView
-        android:id="@+id/listview1"
+    <TextView
+        android:id="@+id/clinician_details"
+        android:hint="Clinician Details"
+        android:textSize="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="35dp"
         android:layout_width="match_parent"
-        android:divider="@null"
-        android:layout_height="330dp"
-        android:layout_marginTop="5dp"
-        android:textColorHint="@color/cardview_dark_background"
-        android:background="@drawable/edittextbackground"/>
+        android:padding="5dp"
+        android:background="@drawable/border"
+        />
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:textColor="@color/cardview_light_background"
-        android:background="@color/cardview_dark_background"
-        android:text="Button"
-        android:textSize="10dp"
-        android:onClick="activePatientsOnClick"
-        android:layout_marginBottom="30dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="20sp"
-        app:backgroundTint="#3F4775"
-        />
+        android:background="@color/cardview_dark_background"
+        android:onClick="DeleteClinButton"
+        android:text="Delete"
+        android:textColor="@color/cardview_light_background"
+        app:backgroundTint="#3F4775"/>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="20sp"
+        android:background="@color/cardview_dark_background"
+        android:onClick="gobackButton"
+        android:text="Back"
+        android:textColor="@color/cardview_light_background"
+        app:backgroundTint="#3F4775"/>
 
     <LinearLayout
         android:id="@+id/content"
@@ -57,10 +62,11 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="vertical">
+
     </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation_client"
+        android:id="@+id/bottom_navigation_admin"
         android:layout_width="match_parent"
         android:layout_height="72dp"
         android:background="@android:color/white"
