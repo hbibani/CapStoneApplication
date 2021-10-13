@@ -1,124 +1,303 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="10dp"
-    android:background="#FFFFFF"
-    android:orientation="vertical"
-    tools:context=".AdminClinicianModifyPage"
-    >
-
-    <TextView
+<androidx.drawerlayout.widget.DrawerLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="50dp"
-        android:gravity="center_horizontal"
-        android:text="Modify Clinician"
-        android:textColor="#3F4775"
-        android:textSize="50dp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context="my.bop.finalassignment.AdminClinicianModifyPage"
+        tools:openDrawer="start">
 
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer" />
 
-    <EditText
-        android:id="@+id/patient_mrn_number"
-        android:hint="Staff Number"
-        android:textSize="10dp"
-        android:textColorHint="@color/cardview_dark_background"
-        android:background="@drawable/edittextbackground"
-        android:layout_marginBottom="10dp"
-        android:layout_height="35dp"
+    <ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:padding="5dp"
-        />
-
-    <EditText
-        android:id="@+id/ClinicianType"
-        android:hint="ClinicianType"
-        android:textSize="10dp"
-        android:textColorHint="@color/cardview_dark_background"
-        android:background="@drawable/edittextbackground"
-        android:layout_marginBottom="10dp"
-        android:layout_height="35dp"
-        android:layout_width="match_parent"
-        android:padding="5dp"
-        />
-
-    <EditText
-        android:id="@+id/username_clinican"
-        android:hint="Username"
-        android:textSize="10dp"
-        android:textColorHint="@color/cardview_dark_background"
-        android:background="@drawable/edittextbackground"
-        android:layout_marginBottom="10dp"
-        android:layout_height="35dp"
-        android:layout_width="match_parent"
-        android:padding="5dp"
-        />
-
-    <EditText
-        android:id="@+id/password_clincian"
-        android:hint="Password"
-        android:textSize="10dp"
-        android:textColorHint="@color/cardview_dark_background"
-        android:background="@drawable/edittextbackground"
-        android:layout_marginBottom="10dp"
-        android:layout_height="35dp"
-        android:layout_width="match_parent"
-        android:padding="5dp"
-        />
-
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20sp"
-        android:background="@color/cardview_dark_background"
-        android:onClick="ModifyClinicianButton"
-        android:text="Modify"
-        android:textColor="@color/cardview_light_background"
-        app:backgroundTint="#3F4775"/>
-
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20sp"
-        android:background="@color/cardview_dark_background"
-        android:onClick="DeleteClinicianButton"
-        android:text="Delete"
-        android:textColor="@color/cardview_light_background"
-        app:backgroundTint="#3F4775"/>
-
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20sp"
-        android:background="@color/cardview_dark_background"
-        android:onClick="GoBackButton"
-        android:text="Back"
-        android:textColor="@color/cardview_light_background"
-        app:backgroundTint="#3F4775"/>
-
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        tools:ignore="MergeRootFrame"
+        android:fillViewport="true">
 
     <LinearLayout
-        android:id="@+id/content"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical"
+        tools:context="my.bop.finalassignment.AdminClinicianModifyPage">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/card1"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/card_5"
+                    android:elevation="8dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:onClick="onClickclinician"
+                        android:src="@drawable/icon_clinician2" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Add Clinician"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/card_2"
+                    android:elevation="8dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:onClick="onClickSearch"
+                        android:src="@drawable/icon_search_patient" />
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Search"
+                    android:textAlignment="center" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppinsbold"
+            android:gravity="center"
+            android:text="Modify Clinician"
+            android:textColor="@color/colorAccent"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="jelly_bean" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Clinician Details"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            tools:targetApi="jelly_bean" />
+
+        <View
+            style="@style/Divider"
+            android:layout_height="2dp"
+            android:background="@color/green"/>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/staffnumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:hint="Staff Number"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/patient_staff_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_username2"
+                android:fontFamily="@font/poppinsmedium"
+                tools:targetApi="jelly_bean" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/clintype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:hint="Clinician Type"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/clinician_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_clinicianadd"
+                android:fontFamily="@font/poppinsmedium"
+                tools:targetApi="jelly_bean" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="256dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:onClick="ModifyClinicianButton"
+            android:text="Modify" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="256dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:onClick="DeleteClinicianButton"
+            android:text="Delete" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="256dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:onClick="DeleteAllClinicianButton"
+            android:text="Delete ALL" />
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Update Username and Password"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            tools:targetApi="jelly_bean" />
+
+        <View
+            style="@style/Divider"
+            android:layout_height="2dp"
+            android:background="@color/green"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/usernametext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:hint="Username"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/username_clinican"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_user"
+                android:fontFamily="@font/poppinsmedium"
+                tools:targetApi="jelly_bean" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:hint="Password"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutUsername"
+            tools:layout_editor_absoluteX="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_clincian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_password"
+                android:drawableRight="@drawable/ic_password"
+                android:fontFamily="@font/poppinsmedium"
+                tools:targetApi="jelly_bean" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="256dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:onClick="UpdateLoginDetails"
+            android:text="Update Username and Password" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="256dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="20dp"
+            android:onClick="GoBackButton"
+            android:text="Back" />
+
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+        </LinearLayout>
     </LinearLayout>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation_admin"
-        android:layout_width="match_parent"
-        android:layout_height="72dp"
-        android:background="@android:color/white"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/bottom_nav_menu_admin" />
-
-</LinearLayout>
+    </ScrollView>
+</androidx.drawerlayout.widget.DrawerLayout>

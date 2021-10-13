@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/nav_group_main"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/action_patient_admin"
+            android:enabled="true"
+            android:title="Patient"
+            android:icon="@drawable/icon_patient_admin" />
+
+        <item
+            android:id="@+id/action_medication_admin"
+            android:enabled="true"
+            android:title="Medication"
+            android:icon="@drawable/icon_medication_admin" />
+
+        <item
+            android:id="@+id/action_clinician_admin"
+            android:enabled="true"
+            android:title="Clinician"
+            android:icon="@drawable/icon_clinician_admin" />
+
+        <item
+            android:id="@+id/action_admission_admin"
+            android:enabled="true"
+            android:title="Admission"
+            android:icon="@drawable/icon_admission_admin" />
+
+        <item
+            android:id="@+id/action_role_admin"
+            android:iconTint="@color/app_color"
+            android:icon="@drawable/icon_role_admin"
+            android:title="Role" />
+    </group>
+
+    <group android:id="@+id/nav_group_add"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_main"
+            android:icon="@drawable/icon_home_admin"
+            android:iconTint="@color/app_color"
+            android:title="@string/action_main" />
+
+        <item
+            android:id="@+id/action_logout_admin2"
+            android:enabled="true"
+            android:title="Logout"
+            android:icon="@drawable/ic_logout" />
+    </group>
+</menu>

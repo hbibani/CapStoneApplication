@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_home_client"
+        android:enabled="true"
+        android:title="Graph"
+        android:icon="@drawable/ic_graph"
+        android:onClick="onClickNavigation"
+        />
+
+    <item
+        android:id="@+id/action_addpatient_client"
+        android:enabled="true"
+        android:title="Medication"
+        android:icon="@drawable/ic_medication"
+        android:onClick="onClickNavigation"
+        />
+
+    <item
+        android:id="@+id/action_add_admission_client"
+        android:enabled="true"
+        android:title="Notes"
+        android:icon="@drawable/ic_notes"
+        android:onClick="onClickNavigation"
+        />
+
+    <item
+        android:id="@+id/action_assigned_patient_client"
+        android:enabled="true"
+        android:title="Clinician"
+        android:icon="@drawable/ic_clinicianadd"
+        android:onClick="onClickNavigation"
+        />
+
+    <item
+        android:id="@+id/action_logout_client"
+        android:enabled="true"
+        android:title="Finalise"
+        android:icon="@drawable/ic_feedbackfinalize"
+        android:onClick="onClickNavigation"
+        />
+
+</menu>
+

@@ -1,101 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="10dp"
-    android:background="#FFFFFF"
-    android:orientation="vertical"
-    tools:context=".AdminHomePage"
-    android:layout_gravity="center"
-    >
-
-    <TextView
+<androidx.drawerlayout.widget.DrawerLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="50dp"
-        android:gravity="center_horizontal"
-        android:text="Admin Home"
-        android:textColor="#3F4775"
-        android:textSize="50dp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context="my.bop.finalassignment.AdminHomePage"
+        tools:openDrawer="start">
 
-    <TextView
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello, welcome go to the navigation below to add, remove, modify an entry."
-        android:textSize="20dp" />
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer" />
 
-    <Button
-        android:id="@+id/modify_patient"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="+/- Patient"
-        android:onClick="onClickPatient"
-        android:layout_gravity="center"
-        android:layout_marginTop="20sp"
-        app:backgroundTint="#3F4775"
-        />
-
-    <Button
-        android:id="@+id/modify_clinician"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="+/- Clinician"
-        android:onClick="onClickClinician"
-        android:layout_gravity="center"
-        android:layout_marginTop="20sp"
-        app:backgroundTint="#3F4775"
-        />
-
-    <Button
-        android:id="@+id/modify_medication"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="+/- Medication"
-        android:onClick="onClickMedication"
-        android:layout_gravity="center"
-        android:layout_marginTop="20sp"
-        app:backgroundTint="#3F4775"
-        />
-
-    <Button
-        android:id="@+id/modify_admission"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="+/- Admission"
-        android:onClick="onClickAdmission"
-        android:layout_gravity="center"
-        android:layout_marginTop="20sp"
-        app:backgroundTint="#3F4775"
-        />
-
-    <Button
-        android:id="@+id/modify_role"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="+/- Role"
-        android:onClick="onClickRole"
-        android:layout_gravity="center"
-        android:layout_marginTop="20sp"
-        app:backgroundTint="#3F4775"
-        />
-
-    <LinearLayout
-        android:id="@+id/content"
+    <ScrollView  xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical">
-    </LinearLayout>
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:fillViewport="true"
+        tools:ignore="MergeRootFrame">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation_admin"
-        android:layout_width="match_parent"
-        android:layout_height="72dp"
-        android:background="@android:color/white"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/bottom_nav_menu_admin" />
-</LinearLayout>
+        <LinearLayout
+            android:id="@+id/main_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:orientation="vertical"
+            android:padding="10dp"
+            tools:context="my.bop.finalassignment.AdminHomePage"
+            style="@style/AlertDialog.AppCompat">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/card1"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="50dp"
+                android:gravity="center_horizontal"
+                android:text="Admin Home"
+                android:textColor="#3F4775"
+                android:textSize="50dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello, welcome go to the navigation to add, remove, modify an entry."
+                android:textSize="20dp" />
+
+            <LinearLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"></LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+
+
+
+
+

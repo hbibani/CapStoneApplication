@@ -1,5 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/drawable/card_1.xml" value="0.221875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/drawable/card_5.xml" value="0.221875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/drawable/ic_clinicianadd.xml" value="0.22083333333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/drawable/ic_datetime.xml" value="0.22083333333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/drawable/ic_export_pdf.xml" value="0.22083333333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/drawable/ic_feedbackfinalize.xml" value="0.22083333333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/drawable/ic_graph.xml" value="0.22083333333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/drawable/ic_homemenu.xml" value="0.22083333333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/drawable/ic_logout.xml" value="0.3828125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/font/baloo.xml" value="0.26510416666666664" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_admission_clinician_page.xml" value="0.19610507246376813" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_admission_finalise_patient_page.xml" value="0.19610507246376813" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_admission_graph_other_page.xml" value="0.124609375" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_admission_graph_page.xml" value="0.1769273433166944" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_admission_medication_page.xml" value="0.21105072463768115" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_admission_modify_clinician_page.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_admission_modify_graph_page.xml" value="0.12771739130434784" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_admission_modify_medication_page.xml" value="0.125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_admission_modify_page.xml" value="0.125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_admission_modify_patient_notes_page.xml" value="0.125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_admission_page.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_admission_patient_notes_page.xml" value="0.19610507246376813" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_admission_staff_page.xml" value="0.21105072463768115" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_clinician_modify_page.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_clinician_page.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_clinician_search_page.xml" value="0.221875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_home_page.xml" value="0.14" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_medication_modify_page.xml" value="0.15" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_medication_page.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_medication_search_key_page.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_medication_search_page.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_patient_modify_page.xml" value="0.18" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_patient_page.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_patient_search_page.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_role_modify_page.xml" value="0.11851851851851852" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_role_page.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admission_admin.xml" value="0.21105072463768115" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_client_add_admission_page.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_client_add_patient_page.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_client_admission_clinician_page.xml" value="0.22916666666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_client_admission_medication_page.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_client_admission_modify_graph_page.xml" value="0.12771739130434784" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_client_admission_notes_page.xml" value="0.2" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_client_assigned_admission_page.xml" value="0.16" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_client_concerned_admission_page.xml" value="0.15760869565217392" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_client_finalise_feedback_page.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_client_home_page.xml" value="0.2" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_client_modify_patient_page.xml" value="0.18070652173913043" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_client_search_admission_page.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_client_search_patient_page.xml" value="0.2" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_client_search_staff_admission_page.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_client_view_client_page.xml" value="0.16920943134535368" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_client_view_clinician_client_page.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_client_view_graph_other_page.xml" value="0.124609375" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_client_view_graph_page.xml" value="0.17365269461077845" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_client_view_home_page.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_client_view_medication_client_page.xml" value="0.18" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_client_view_notes_client_page.xml" value="0.18" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_login.xml" value="0.18" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_main.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_patient_home_page.xml" value="0.18" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_patient_pain_page.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/adapter_admission.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/adapter_admission_admin.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/adapter_clinician.xml" value="0.33" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/adapter_clinician_admin.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/adapter_graph.xml" value="0.1490036231884058" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/adapter_graph_pain.xml" value="0.33" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/adapter_medication.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/adapter_medication_admin.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/adapter_notes.xml" value="0.22916666666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/adapter_notification.xml" value="0.2563405797101449" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/adapter_patient.xml" value="0.2046875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/adapter_role.xml" value="0.33" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/nav_header_main.xml" value="0.10005065856129686" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/menu/activity_main_drawer.xml" value="0.16296296296296298" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/menu/bottom_nav_menu_admin.xml" value="0.22962962962962963" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/menu/bottom_nav_menu_admin_patient.xml" value="0.2046875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/menu/bottom_nav_menu_client.xml" value="0.2" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/menu/top_nav_menu_client_admission.xml" value="0.23489583333333333" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

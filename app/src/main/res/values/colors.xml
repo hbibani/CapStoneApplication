@@ -7,4 +7,59 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#34b7eb</color>
+    <color name="colorPrimaryDark">#0A9FDB</color>
+    <color name="colorAccent">#34b7eb</color>
+    <color name="transparent">#00000000</color>
+    <color name="lightblue">#0274B2</color>
+    <color name="middleblue">#8aa5ce</color>
+    <color name="darkblue">#024265</color>
+    <color name="middlegrey">#A8A8A8</color>
+    <color name="yellow">#f6d126</color>
+    <color name="red">#B71C1C</color>
+    <color name="green">#388E3C</color>
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen">#026499</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen">#448bb2</color>
+    <color name="app_color">#34b7eb</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen</item>
+        <item>@color/dot_light_screen</item>
+        <item>@color/dot_light_screen</item>
+        <item>@color/dot_light_screen</item>
+        <item>@color/dot_light_screen</item>
+        <item>@color/dot_light_screen</item>
+        <item>@color/dot_light_screen</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen</item>
+        <item>@color/dot_dark_screen</item>
+        <item>@color/dot_dark_screen</item>
+        <item>@color/dot_dark_screen</item>
+        <item>@color/dot_dark_screen</item>
+        <item>@color/dot_dark_screen</item>
+        <item>@color/dot_dark_screen</item>
+    </array>
+
+
+
+    <!--      Dashboard Colors      -->
+
+    <!--  Body and background Colors  -->
+    <color name="home_background">#f2f5f8</color>
+    <color name="banner_background">#F1E9CE</color>
+    <color name="banner_background_light">#56F1E9CE</color>
+
+    <!--  Card Colors  -->
+    <color name="card1">#68E8E6</color>
+    <color name="card2">#87ceff</color>
+    <color name="card3">#f7c59f</color>
+    <color name="card4">#b8d7f5</color>
+    <color name="card5">#ffccff</color>
+
 </resources>

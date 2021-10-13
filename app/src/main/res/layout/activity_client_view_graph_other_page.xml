@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="my.bop.finalassignment.ClientViewGraphOtherPage">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MergeRootFrame"
+        android:fillViewport="true"
+        android:paddingBottom="72dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            tools:context="my.bop.finalassignment.ClientViewGraphOtherPage">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/card_1"
+                        android:elevation="8sp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:onClick="onClickGraph"
+                            android:src="@drawable/icon_graph" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Graph"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/card_2"
+                        android:elevation="8dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:onClick="onClickMedication"
+                            android:src="@drawable/icon_medication" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Medicine"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/card_3"
+                        android:elevation="8dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:onClick="onClickNotes"
+                            android:src="@drawable/icon_notes" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Notes"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/card_4"
+                        android:elevation="8dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:onClick="onClickClinician"
+                            android:src="@drawable/icon_doctor" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Clinician"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/card_5"
+                        android:elevation="8dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:onClick="onClickFeedback"
+                            android:src="@drawable/icon_feedback" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Finalise"
+                        android:textAlignment="center" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppinsbold"
+                android:gravity="center"
+                android:text="Other Details"
+                android:textColor="@color/colorAccent"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:targetApi="jelly_bean" />
+
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Admission Status"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                tools:targetApi="jelly_bean" />
+
+            <View
+                style="@style/Divider"
+                android:layout_marginTop="0dp"
+                android:layout_height="2dp"
+                android:background="@color/green"/>
+
+            <Switch
+                android:id="@+id/status_admission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsbold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:hint="Question 1: "
+                android:text="Status"
+                android:textSize="13dp" />
+
+            <Button
+                android:id="@+id/statusbutton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="256dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:onClick="ModifyStatus"
+                android:text="Change Status"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progress" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Pain Type and Region"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                tools:targetApi="jelly_bean" />
+
+            <View
+                style="@style/Divider"
+                android:layout_marginTop="0dp"
+                android:layout_height="2dp"
+                android:background="@color/green"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/paintype1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:hint="Pain Type"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editPaintType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_paintype"
+                    android:fontFamily="@font/poppinsmedium"
+                    tools:targetApi="jelly_bean" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/painregion1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:hint="Pain Region"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editPainRegion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_painlocation"
+                    android:fontFamily="@font/poppinsmedium"
+                    tools:targetApi="jelly_bean" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/paintypeformbutton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="256dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:onClick="ModifyPainType"
+                android:text="Modify Pain"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progress" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Reminder Interval"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                tools:targetApi="jelly_bean" />
+
+            <View
+                style="@style/Divider"
+                android:layout_marginTop="0dp"
+                android:layout_height="2dp"
+                android:background="@color/green"/>
+
+            <TextView
+                android:id="@+id/Sextext"
+                android:layout_width="185dp"
+                android:layout_height="57dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:padding="10dp"
+                android:text="Reminder Period (Minutes)"
+                android:textColor="@color/green"
+                android:textSize="15dp" />
+
+            <Spinner
+                style="@style/Widget.AppCompat.Spinner.DropDown"
+                android:layout_width="match_parent"
+                android:id="@+id/spinner1"
+                android:fontFamily="@font/poppinsmedium"
+                android:textSize="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="35dp"
+                android:padding="5dp"
+                />
+
+            <Button
+                android:id="@+id/timerbutton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="256dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:onClick="ModifyTimer"
+                android:text="Modify Timer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progress" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Start/End Time"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                tools:targetApi="jelly_bean" />
+
+            <View
+                style="@style/Divider"
+                android:layout_marginTop="0dp"
+                android:layout_height="2dp"
+                android:background="@color/green"/>
+
+            <TextView
+                android:id="@+id/datetext"
+                android:layout_width="185dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Start Time"
+                android:fontFamily="@font/poppinsmedium"
+                android:textColor="@color/green"
+                android:textSize="15dp" />
+
+
+            <EditText
+                android:hint="SELECT DATE and Time"
+                android:id="@+id/date_time_input"
+                android:inputType="none"
+                android:textSize="10dp"
+                android:drawableEnd="@drawable/ic_datetime"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:background="@drawable/border" />
+
+            <TextView
+                android:id="@+id/datetext2"
+                android:layout_width="185dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="End Time"
+                android:fontFamily="@font/poppinsmedium"
+                android:textColor="@color/green"
+                android:textSize="15dp" />
+
+
+            <EditText
+                android:hint="SELECT DATE and Time"
+                android:id="@+id/date_time_input2"
+                android:inputType="none"
+                android:textSize="10dp"
+                android:drawableEnd="@drawable/ic_datetime"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:background="@drawable/border" />
+
+            <Button
+                android:id="@+id/endtime"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="256dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:onClick="ModifyTimes"
+                android:text="Modify Times"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progress" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Bed Details"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                tools:targetApi="jelly_bean" />
+
+            <View
+                style="@style/Divider"
+                android:layout_marginTop="0dp"
+                android:layout_height="2dp"
+                android:background="@color/green"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/bednumber1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:hint="Bed Number"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/bednumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_bednumber"
+                    android:fontFamily="@font/poppinsmedium"
+                    tools:targetApi="jelly_bean" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/signin"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="256dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:onClick="ModifyBed"
+                android:text="Modify"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progress" />
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_client"
+        android:theme="@style/ThemeOverlay.BottomNavView"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginTop="10sp"
+        android:background="@android:color/white"
+        app:labelVisibilityMode="labeled"
+        app:itemTextColor="#000000"
+        android:layout_gravity="bottom"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+        app:menu="@menu/bottom_nav_menu_client"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

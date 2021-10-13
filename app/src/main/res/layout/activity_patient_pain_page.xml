@@ -1,69 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
-    android:background="#FFFFFF"
-    android:orientation="vertical"
-    tools:context=".PatientPainPage"
-    android:layout_gravity="center"
-    >
+    tools:context="my.bop.finalassignment.PatientPainPage">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="50dp"
-        android:gravity="center_horizontal"
-        android:text="Patient Pain"
-        android:textColor="#3F4775"
-        android:textSize="50dp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add your pain score:"
-        android:textColor="#3F4775"
-        android:textSize="20dp" />
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <LinearLayout
-        android:id="@+id/content"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+
+            android:fontFamily="@font/poppinsbold"
+            android:gravity="center"
+            android:text="Pain Page"
+            android:textColor="@color/colorAccent"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="jelly_bean" />
+
+
+        <TextView
+            android:id="@+id/painscorename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Input Pain Score"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            tools:targetApi="jelly_bean" />
+
+        <View
+            style="@style/Divider"
+            android:layout_height="2dp"
+            android:background="@color/green"/>
+
+        <ImageView
+            android:id="@+id/imagepain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icon_painscore" />
+
+        <TextView
+            android:id="@+id/instructions"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/poppinsbold"
+            android:layout_height="wrap_content"
+            android:text="Please wait for next input."
+            android:textColor="#3F4775"
+            android:textSize="20dp"
+            android:layout_marginTop="0dp"
+            />
 
         <SeekBar
             android:id="@+id/seekBar"
             style="@style/Widget.AppCompat.SeekBar.Discrete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:max="11"
+            android:max="10"
             android:progress="3"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="50dp"/>
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp"/>
 
         <Button
-            android:layout_width="300dp"
+            android:id="@+id/button1"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="256dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20sp"
-            android:background="@color/cardview_dark_background"
+            android:layout_marginTop="0dp"
             android:onClick="addPatientPainButton"
-            android:text="Add Pain Number"
-            android:textColor="@color/cardview_light_background"
-            app:backgroundTint="#3F4775"/>
+            android:text="Add Pain Number" />
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+        </LinearLayout>
+
 
     </LinearLayout>
+</ScrollView>
+<com.google.android.material.bottomnavigation.BottomNavigationView
+android:id="@+id/bottom_navigation_client"
+android:theme="@style/ThemeOverlay.BottomNavView"
+android:layout_width="match_parent"
+android:layout_height="72dp"
+android:layout_marginTop="10sp"
+android:background="@android:color/white"
+app:labelVisibilityMode="labeled"
+app:itemTextColor="#000000"
+android:layout_gravity="bottom"
+app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+app:menu="@menu/bottom_nav_menu_patient"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation_patient"
-        android:layout_width="match_parent"
-        android:layout_height="72dp"
-        android:background="@android:color/white"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/bottom_nav_menu_patient" />
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="my.bop.finalassignment.ClientViewHomePage">
+
+    <ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            tools:ignore="MergeRootFrame"
+            android:fillViewport="true"
+            android:paddingBottom="72dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            tools:context="my.bop.finalassignment.ClientViewHomePage"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/poppinsbold"
+                android:gravity="center"
+                android:text="Patient Lists"
+                android:textColor="@color/colorAccent"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:targetApi="jelly_bean" />
+
+            <RelativeLayout
+                android:id="@+id/make_selection_sms_box"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/mobile_icon"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/all_patients"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"/>
+
+                <TextView
+                    android:id="@+id/mobile_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="48dp"
+                    android:layout_toRightOf="@id/mobile_icon"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="All Patients"
+                    android:textColor="@color/green"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/mobile_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Patient Number"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsbold"
+                    android:layout_toRightOf="@id/mobile_icon"
+                    android:layout_below="@id/mobile_title"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="-10dp"
+                    android:layout_marginBottom="17dp"
+                    android:background="@color/transparent"
+                    android:onClick="allPatients" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/danger_patients"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/mobile_icon1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/danger_patients2"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"/>
+
+                <TextView
+                    android:id="@+id/danger_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Critical Patients"
+                    android:textColor="@color/red"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:layout_toRightOf="@id/mobile_icon1"
+                    android:layout_marginTop="48dp"/>
+
+                <TextView
+                    android:id="@+id/danger_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Patient Number"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsbold"
+                    android:layout_toRightOf="@id/mobile_icon1"
+                    android:layout_below="@id/danger_title"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:onClick="concernedPatients" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/assigned_patients"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/assigned_icon1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/assigned_patients2"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"/>
+
+                <TextView
+                    android:id="@+id/assigned_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Assigned Patients"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:layout_toRightOf="@id/assigned_icon1"
+                    android:layout_marginTop="48dp"/>
+
+                <TextView
+                    android:id="@+id/assigned_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Patient Number"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsbold"
+                    android:layout_toRightOf="@id/assigned_icon1"
+                    android:layout_below="@id/assigned_title"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:onClick="assignedPatients" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_client"
+        android:theme="@style/ThemeOverlay.BottomNavView"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/white"
+        app:labelVisibilityMode="labeled"
+        app:itemTextColor="#000000"
+        android:layout_gravity="bottom"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+        app:menu="@menu/bottom_nav_menu_client"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

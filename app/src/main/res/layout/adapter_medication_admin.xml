@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:padding="2dp">
+
+    <RelativeLayout
+        android:id="@+id/make_selection_sms_box"
+        android:layout_width="383dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:padding="0dp">
+
+        <TextView
+            android:id="@+id/brand_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/image_des"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Brand:"
+            android:textColor="@color/green"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/med_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@id/image_des"
+            android:fontFamily="@font/poppinsbold"
+            android:layout_below="@id/brand_name"
+            android:text="Chem:"
+            android:textColor="@color/green"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/dosage_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/med_title"
+            android:layout_toRightOf="@id/image_des"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Dosage"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/dosageform_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dosage_des"
+            android:layout_toRightOf="@id/image_des"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Dosage Form:"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/image_des"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/icon_medication2">
+
+        </ImageView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

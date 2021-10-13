@@ -1,69 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
-    android:background="#FFFFFF"
-    android:orientation="vertical"
-    tools:context=".ClientHomePage"
-    android:layout_gravity="center"
-    >
+    tools:context="my.bop.finalassignment.ClientHomePage">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="50dp"
-        android:gravity="center_horizontal"
-        android:text="Clinician Home"
-        android:textColor="#3F4775"
-        android:textSize="50dp"
-        android:textStyle="bold" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Active Patients: "
-        android:textColor="#3F4775"
-        android:textSize="20dp" />
-
-    <ListView
-        android:id="@+id/listview1"
-        android:layout_width="match_parent"
-        android:divider="@null"
-        android:layout_height="330dp"
-        android:layout_marginTop="5dp"
-        android:textColorHint="@color/cardview_dark_background"
-        android:background="@drawable/edittextbackground"/>
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:textColor="@color/cardview_light_background"
-        android:background="@color/cardview_dark_background"
-        android:text="Button"
-        android:textSize="10dp"
-        android:onClick="activePatientsOnClick"
-        android:layout_marginBottom="30dp"
-        android:layout_marginTop="20sp"
-        app:backgroundTint="#3F4775"
-        />
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="MergeRootFrame"
+    android:overScrollMode="never"
+    android:fillViewport="true"
+    android:paddingBottom="72dp">
 
     <LinearLayout
-        android:id="@+id/content"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical">
-    </LinearLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        tools:context="my.bop.finalassignment.ClientHomePage">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation_client"
-        android:layout_width="match_parent"
-        android:layout_height="72dp"
-        android:background="@android:color/white"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/bottom_nav_menu_client" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/poppinsbold"
+            android:gravity="center"
+            android:text="Active Patients"
+            android:textColor="@color/colorAccent"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="jelly_bean" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/admissionList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="10dp" />
 </LinearLayout>
+</ScrollView>
+<com.google.android.material.bottomnavigation.BottomNavigationView
+android:id="@+id/bottom_navigation_client"
+android:layout_width="match_parent"
+android:theme="@style/ThemeOverlay.BottomNavView"
+android:layout_height="72dp"
+android:layout_marginTop="10sp"
+android:background="@android:color/white"
+app:labelVisibilityMode="labeled"
+app:itemTextColor="#000000"
+android:layout_gravity="bottom"
+app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+app:menu="@menu/bottom_nav_menu_client"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

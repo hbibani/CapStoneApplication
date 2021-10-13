@@ -3,52 +3,129 @@
     package="com.example.finalassignment">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.FinalAssignment"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ClientViewClinicianClientPage"></activity>
+        <activity
+            android:name="my.bop.finalassignment.AdminAdmissionGraphOtherPage"
+            android:exported="true" />
+        <activity
+            android:name="my.bop.finalassignment.ClientViewGraphOtherPage"
+            android:exported="true" />
+        <activity
+            android:name="my.bop.finalassignment.AdminMedicationSearchKeyPage"
+            android:exported="true" />
+        <activity
+            android:name="my.bop.finalassignment.AdminAdmissionModifyGraphPage"
+            android:exported="true" />
+        <activity
+            android:name="my.bop.finalassignment.ClientAdmissionModifyGraphPage"
+            android:exported="true" />
+        <activity
+            android:name="my.bop.finalassignment.ClientModifyPatientPage"
+            android:exported="true" />
+        <activity
+            android:name="my.bop.finalassignment.ClientSearchPatientPage"
+            android:exported="true" />
+        <activity
+            android:name="my.bop.finalassignment.ClientSearchStaffAdmissionPage"
+            android:exported="true" />
+        <activity
+            android:name="my.bop.finalassignment.ClientSearchAdmissionPage"
+            android:exported="true" />
+        <activity
+            android:name="my.bop.finalassignment.AdminAdmissionFinalisePatientPage"
+            android:exported="true" />
+        <activity
+            android:name="my.bop.finalassignment.AdminAdmissionClinicianPage"
+            android:exported="true" />
+        <activity
+            android:name="my.bop.finalassignment.AdminAdmissionPatientNotesPage"
+            android:exported="true" />
+        <activity
+            android:name="my.bop.finalassignment.AdminAdmissionMedicationPage"
+            android:exported="true" />
+        <activity
+            android:name="my.bop.finalassignment.AdminAdmissionGraphPage"
+            android:exported="true" />
+        <activity
+            android:name="my.bop.finalassignment.AdminAdmissionStaffPage"
+            android:exported="true" />
+        <activity
+            android:name="my.bop.finalassignment.AdminMedicationSearchPage"
+            android:exported="true" />
+        <activity
+            android:name="my.bop.finalassignment.AdminClinicianSearchPage"
+            android:exported="true" />
+        <activity
+            android:name="my.bop.finalassignment.AdminPatientSearchPage"
+            android:exported="true" />
+        <activity
+            android:name="my.bop.finalassignment.ClientAdmissionClinicianPage"
+            android:exported="true" />
+        <activity
+            android:name="my.bop.finalassignment.ClientAdmissionNotesPage"
+            android:exported="true" />
+        <activity
+            android:name="my.bop.finalassignment.ClientAdmissionMedicationPage"
+            android:exported="true" />
+        <activity
+            android:name="my.bop.finalassignment.ClientViewGraphPage"
+            android:exported="true" />
+        <activity
+            android:name="my.bop.finalassignment.ClientViewHomePage"
+            android:exported="true" />
+        <activity android:name="my.bop.finalassignment.ClientAssignedAdmissionPage" />
+        <activity android:name="my.bop.finalassignment.ClientConcernedAdmissionPage" />
 
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
 
-        <activity android:name=".ClientViewNotesClientPage" />
-        <activity android:name=".ClientViewMedicationClientPage" />
-        <activity android:name=".PatientPainPage" />
-        <activity android:name=".PatientHomePage" />
-        <activity android:name=".AdminRoleModifyPage" />
-        <activity android:name=".AdminRolePage" />
-        <activity android:name=".AdminAdmissionModifyPatientNotesPage" />
-        <activity android:name=".AdminAdmissionModifyMedicationPage" />
-        <activity android:name=".AdminAdmissionModifyPage" />
-        <activity android:name=".AdminAdmissionPage" />
-        <activity android:name=".AdminMedicationModifyPage" />
-        <activity android:name=".AdminMedicationPage" />
-        <activity android:name=".AdminClinicianModifyPage" />
-        <activity android:name=".AdminClinicianPage" />
-        <activity android:name=".AdminPatientPage" />
-        <activity android:name=".AdminPatientModifyPage" />
-        <activity android:name=".AdminHomePage" />
-        <activity android:name=".ClientAddAdmissionPage" />
-        <activity android:name=".ClientFinaliseFeedbackPage" />
-        <activity android:name=".ClientViewClientPage" />
-        <activity android:name=".ClientAddPatientPage" />
-        <activity android:name=".ClientHomePage" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name="my.bop.finalassignment.ClientViewNotesClientPage" />
+        <activity android:name="my.bop.finalassignment.ClientViewMedicationClientPage" />
+        <activity android:name="my.bop.finalassignment.PatientPainPage" />
+        <activity android:name="my.bop.finalassignment.PatientHomePage" />
+        <activity android:name="my.bop.finalassignment.AdminRoleModifyPage" />
+        <activity android:name="my.bop.finalassignment.AdminRolePage" />
+        <activity android:name="my.bop.finalassignment.AdminAdmissionModifyPatientNotesPage" />
+        <activity android:name="my.bop.finalassignment.AdminAdmissionModifyMedicationPage" />
+        <activity android:name="my.bop.finalassignment.AdminAdmissionPage" />
+        <activity android:name="my.bop.finalassignment.AdminMedicationModifyPage" />
+        <activity android:name="my.bop.finalassignment.AdminMedicationPage" />
+        <activity android:name="my.bop.finalassignment.AdminClinicianModifyPage" />
+        <activity android:name="my.bop.finalassignment.AdminClinicianPage" />
+        <activity android:name="my.bop.finalassignment.AdminPatientPage" />
+        <activity android:name="my.bop.finalassignment.AdminPatientModifyPage" />
+        <activity android:name="my.bop.finalassignment.AdminHomePage" />
+        <activity android:name="my.bop.finalassignment.ClientAddAdmissionPage" />
+        <activity android:name="my.bop.finalassignment.ClientFinaliseFeedbackPage" />
+        <activity android:name="my.bop.finalassignment.ClientAddPatientPage" />
+        <activity android:name="my.bop.finalassignment.ClientHomePage" />
+        <activity
+            android:name="my.bop.finalassignment.MainActivity"
+            android:clearTaskOnLaunch="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity> <!-- Fire base messaging service -->
+        <service android:name="my.bop.finalassignment.Notification.MyFirebaseServices">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="my.bop.finalassignment.ExampleJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
     </application>
 
 </manifest>

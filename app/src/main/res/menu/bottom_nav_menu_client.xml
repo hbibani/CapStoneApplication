@@ -1,32 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
-
     <item
         android:id="@+id/action_home_client"
         android:enabled="true"
         android:title="Home"
-        android:onClick="onClickNavigation"
-        />
+        android:icon="@drawable/ic_homemenu"
+        android:onClick="onClickNavigation" />
+
     <item
         android:id="@+id/action_addpatient_client"
         android:enabled="true"
         android:title="+Patient"
-        android:onClick="onClickNavigation"
-        />
+        android:icon="@drawable/ic_addpatient"
+        android:onClick="onClickNavigation" />
+
     <item
         android:id="@+id/action_add_admission_client"
         android:enabled="true"
         android:title="+Admission"
-        android:onClick="onClickNavigation"
-         />
+        android:icon="@drawable/ic_addadmission"
+        android:onClick="onClickNavigation" />
+
+    <item
+        android:id="@+id/action_assigned_patient_client"
+        android:enabled="true"
+        android:title="Search"
+        android:icon="@drawable/icon_mrn_search"
+        android:onClick="onClickNavigation" />
+
     <item
         android:id="@+id/action_logout_client"
         android:enabled="true"
         android:title="Logout"
-        android:onClick="onClickNavigation"
-        />
-
-    //app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_logout"
+        android:onClick="onClickNavigation" />
 </menu>
 
