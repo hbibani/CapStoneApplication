@@ -15,16 +15,19 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name="my.bop.finalassignment.AdminAdmissionGraphOtherPage"
-            android:exported="true" />
+            android:exported="true"
+            android:label=""/>
         <activity
             android:name="my.bop.finalassignment.ClientViewGraphOtherPage"
             android:exported="true" />
         <activity
             android:name="my.bop.finalassignment.AdminMedicationSearchKeyPage"
-            android:exported="true" />
+            android:exported="true"
+            android:label=""/>
         <activity
             android:name="my.bop.finalassignment.AdminAdmissionModifyGraphPage"
-            android:exported="true" />
+            android:exported="true"
+            android:label=""/>
         <activity
             android:name="my.bop.finalassignment.ClientAdmissionModifyGraphPage"
             android:exported="true" />
@@ -42,31 +45,40 @@
             android:exported="true" />
         <activity
             android:name="my.bop.finalassignment.AdminAdmissionFinalisePatientPage"
-            android:exported="true" />
+            android:exported="true"
+            android:label=""/>
         <activity
             android:name="my.bop.finalassignment.AdminAdmissionClinicianPage"
-            android:exported="true" />
+            android:exported="true"
+            android:label=""/>
         <activity
             android:name="my.bop.finalassignment.AdminAdmissionPatientNotesPage"
-            android:exported="true" />
+            android:exported="true"
+            android:label=""/>
         <activity
             android:name="my.bop.finalassignment.AdminAdmissionMedicationPage"
-            android:exported="true" />
+            android:exported="true"
+            android:label=""/>
         <activity
             android:name="my.bop.finalassignment.AdminAdmissionGraphPage"
-            android:exported="true" />
+            android:exported="true"
+            android:label=""/>
         <activity
             android:name="my.bop.finalassignment.AdminAdmissionStaffPage"
-            android:exported="true" />
+            android:exported="true"
+            android:label=""/>
         <activity
             android:name="my.bop.finalassignment.AdminMedicationSearchPage"
-            android:exported="true" />
+            android:exported="true"
+            android:label=""/>
         <activity
             android:name="my.bop.finalassignment.AdminClinicianSearchPage"
-            android:exported="true" />
+            android:exported="true"
+            android:label="" />
         <activity
             android:name="my.bop.finalassignment.AdminPatientSearchPage"
-            android:exported="true" />
+            android:exported="true"
+            android:label="" />
         <activity
             android:name="my.bop.finalassignment.ClientAdmissionClinicianPage"
             android:exported="true" />
@@ -93,18 +105,30 @@
         <activity android:name="my.bop.finalassignment.ClientViewMedicationClientPage" />
         <activity android:name="my.bop.finalassignment.PatientPainPage" />
         <activity android:name="my.bop.finalassignment.PatientHomePage" />
-        <activity android:name="my.bop.finalassignment.AdminRoleModifyPage" />
-        <activity android:name="my.bop.finalassignment.AdminRolePage" />
-        <activity android:name="my.bop.finalassignment.AdminAdmissionModifyPatientNotesPage" />
-        <activity android:name="my.bop.finalassignment.AdminAdmissionModifyMedicationPage" />
-        <activity android:name="my.bop.finalassignment.AdminAdmissionPage" />
-        <activity android:name="my.bop.finalassignment.AdminMedicationModifyPage" />
-        <activity android:name="my.bop.finalassignment.AdminMedicationPage" />
-        <activity android:name="my.bop.finalassignment.AdminClinicianModifyPage" />
-        <activity android:name="my.bop.finalassignment.AdminClinicianPage" />
-        <activity android:name="my.bop.finalassignment.AdminPatientPage" />
-        <activity android:name="my.bop.finalassignment.AdminPatientModifyPage" />
-        <activity android:name="my.bop.finalassignment.AdminHomePage" />
+        <activity android:name="my.bop.finalassignment.AdminRoleModifyPage"
+            android:label=""/>
+        <activity android:name="my.bop.finalassignment.AdminRolePage"
+            android:label=""/>
+        <activity android:name="my.bop.finalassignment.AdminAdmissionModifyPatientNotesPage"
+            android:label=""/>
+        <activity android:name="my.bop.finalassignment.AdminAdmissionModifyMedicationPage"
+            android:label=""/>
+        <activity android:name="my.bop.finalassignment.AdminAdmissionPage"
+            android:label=""/>
+        <activity android:name="my.bop.finalassignment.AdminMedicationModifyPage"
+            android:label=""/>
+        <activity android:name="my.bop.finalassignment.AdminMedicationPage"
+            android:label=""/>
+        <activity android:name="my.bop.finalassignment.AdminClinicianModifyPage"
+            android:label=""/>
+        <activity android:name="my.bop.finalassignment.AdminClinicianPage"
+            android:label=""/>
+        <activity android:name="my.bop.finalassignment.AdminPatientPage"
+            android:label="" />
+        <activity android:name="my.bop.finalassignment.AdminPatientModifyPage"
+            android:label="" />
+        <activity android:name="my.bop.finalassignment.AdminHomePage"
+            android:label="" />
         <activity android:name="my.bop.finalassignment.ClientAddAdmissionPage" />
         <activity android:name="my.bop.finalassignment.ClientFinaliseFeedbackPage" />
         <activity android:name="my.bop.finalassignment.ClientAddPatientPage" />
