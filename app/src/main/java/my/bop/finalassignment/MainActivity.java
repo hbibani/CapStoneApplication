@@ -116,24 +116,20 @@ EditText password1;
                 if (putData.onComplete())
                 {
                     String result = putData.getResult();
-                    Log.i("Result", result.toString());
-                    if(result.contains("Role: '1'") || result.contains("Role: '2'") || result.contains("Role: '3'")  )
-                    {
-                        SharedPreferences.Editor editor = pref.edit();
-                        editor.putString("Username", usernameString);
-                        editor.putString("Type", result );
-                        editor.apply();
+                    SharedPreferences.Editor editor = pref.edit();
+                    editor.putString("Username", usernameString);
+                    editor.putString("Type", result );
+                    editor.apply();
 
-                        if(result.contains("Role: '1'"))
-                        {
+                    switch(result)
+                    {
+                        case "Role: '1'":
                             startActivity(new Intent(MainActivity.this, AdminHomePage.class));
-                        }
-                        else if(result.contains("Role: '2'"))
-                        {
+                            break;
+                        case "Role: '2'":
                             startActivity(new Intent(MainActivity.this, ClientViewHomePage.class));
-                        }
-                        else if(result.contains("Role: '3'"))
-                        {
+                            break;
+                        case "Role: '3'":
                             if(getMrn())
                             {
                                 SharedPreferences.Editor editor1 = pref.edit();
@@ -141,18 +137,15 @@ EditText password1;
                                 editor1.apply();
                                 startActivity(new Intent(MainActivity.this, PatientHomePage.class));
                             }
-                            else
-                            {
-                                Toast.makeText(MainActivity.this, "Could not retrieve MRN.", Toast.LENGTH_SHORT).show();
-                            }
-
+                            break;
+                        case "Error: Database connection":
+                            Toast.makeText(MainActivity.this, "Error: Database connection", Toast.LENGTH_SHORT).show();
+                            break;
+                        default:
+                        {
+                            Toast.makeText(MainActivity.this, "Password or username is incorrect.", Toast.LENGTH_SHORT).show();
                         }
                     }
-                    else
-                    {
-                        Toast.makeText(MainActivity.this, putData.getResult(), Toast.LENGTH_SHORT).show();
-                    }
-
                 }
             }
     }
@@ -176,10 +169,19 @@ EditText password1;
             {
                 String result = putData.getResult();
 
-                if(!result.equals("false") && !result.equals("Error: Database connection") &&  !result.equals("All fields are required"))
+                switch(result)
                 {
-                    mrn = result;
-                    return true;
+                    case "false":
+                        Toast.makeText(MainActivity.this, "Could not retrieve mrn.", Toast.LENGTH_SHORT).show();
+                        break;
+                    case "Error: Database connection":
+                        Toast.makeText(MainActivity.this, "Error: Database connection", Toast.LENGTH_SHORT).show();
+                        return false;
+                    default:
+                    {
+                        mrn = result;
+                        return true;
+                    }
                 }
             }
         }
@@ -188,9 +190,9 @@ EditText password1;
     }
 
 
-
     @Override
-    public void onBackPressed() {
+    public void onBackPressed()
+    {
         return;
     }
 
