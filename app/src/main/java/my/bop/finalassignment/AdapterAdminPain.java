@@ -95,14 +95,12 @@ public class AdapterAdminPain extends RecyclerView.Adapter<RecyclerView.ViewHold
             String graphid = paininput.getGraphID();
             String graphvalueid = paininput.getGraphValueID();
 
-
             String[] field = new String[1];
             field[0] = "graphvalueid";
 
             //Creating array for data
             String[] data = new String[1];
             data[0] = graphvalueid;
-
 
             PutData putData = new PutData("http://bopps2130.net/deletegraphvalue.php", "POST", field, data);
             if (putData.startPut())

@@ -141,7 +141,7 @@ EditText password1;
                         case "Error: Database connection":
                             Toast.makeText(MainActivity.this, "Error: Database connection", Toast.LENGTH_SHORT).show();
                             break;
-                        default:
+                        case "false":
                         {
                             Toast.makeText(MainActivity.this, "Password or username is incorrect.", Toast.LENGTH_SHORT).show();
                         }

@@ -51,15 +51,6 @@ public class ExampleJobService extends JobService
                         if (putData.onComplete())
                         {
                             String result = putData.getResult();
-
-                            if(result.equals("Success"))
-                            {
-                                Log.d("Exampleservicetimer", "In here.");
-                            }
-                            else
-                            {
-
-                            }
                         }
                     }
 
@@ -99,7 +90,6 @@ public class ExampleJobService extends JobService
     @Override
     public boolean onStopJob(JobParameters params)
     {
-        Log.d("onStopJob", "Job cancelled");
         return false;
     }
 }
