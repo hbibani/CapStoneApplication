@@ -1,9 +1,11 @@
 package my.bop.finalassignment;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -319,13 +321,32 @@ public class ClientViewMedicationClientPage extends AppCompatActivity
 
     public void DeleteMedButton(View view)
     {
-        if(delMedication())
-        {
-            Intent intent = new Intent(this, ClientAdmissionMedicationPage.class);
-            intent.putExtra("mrn", mrn);
-            intent.putExtra("admissionid", admissionid);
-            startActivity(intent);
-        }
+        AlertDialog myQuittingDialogBox = new AlertDialog.Builder(this)
+                // set message, title, and icon
+                .setTitle("Delete")
+                .setMessage("Do you want to Delete")
+                .setIcon(R.drawable.ic_baseline_delete_forever_24)
+
+                .setPositiveButton("Delete", (dialog, whichButton) -> {
+                    if(delMedication())
+                    {
+                        Intent intent = new Intent(this, ClientAdmissionMedicationPage.class);
+                        intent.putExtra("mrn", mrn);
+                        intent.putExtra("admissionid", admissionid);
+                        startActivity(intent);
+                    }
+                    dialog.dismiss();
+                })
+                .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        dialog.dismiss();
+
+                    }
+                })
+                .create();
+
+        myQuittingDialogBox.show();
     }
 
     public void goBackButton(View view)

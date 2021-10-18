@@ -2,11 +2,13 @@ package my.bop.finalassignment;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -361,11 +363,30 @@ public class AdminClinicianModifyPage extends AppCompatActivity implements Navig
 
     public void DeleteClinicianButton(View view)
     {
-        if(deleteClinician())
-        {
-            Intent intent = new Intent(getApplicationContext(),  AdminClinicianPage.class);
-            startActivity(intent);
-        }
+        AlertDialog myQuittingDialogBox = new AlertDialog.Builder(this)
+                // set message, title, and icon
+                .setTitle("Delete")
+                .setMessage("Do you want to Delete")
+                .setIcon(R.drawable.ic_baseline_delete_forever_24)
+
+                .setPositiveButton("Delete", (dialog, whichButton) -> {
+                    if(deleteClinician())
+                    {
+                        Intent intent = new Intent(getApplicationContext(),  AdminClinicianPage.class);
+                        startActivity(intent);
+                    }
+                    dialog.dismiss();
+                })
+                .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        dialog.dismiss();
+
+                    }
+                })
+                .create();
+
+        myQuittingDialogBox.show();
     }
 
     private boolean deleteClinician()
@@ -417,11 +438,31 @@ public class AdminClinicianModifyPage extends AppCompatActivity implements Navig
 
     public void DeleteAllClinicianButton(View view)
     {
-        if(deleteAllClinician())
-        {
-            Intent intent = new Intent(getApplicationContext(), AdminClinicianPage.class);
-            startActivity(intent);
-        }
+        AlertDialog myQuittingDialogBox = new AlertDialog.Builder(this)
+                // set message, title, and icon
+                .setTitle("Delete")
+                .setMessage("Do you want to Delete")
+                .setIcon(R.drawable.ic_baseline_delete_forever_24)
+
+                .setPositiveButton("Delete", (dialog, whichButton) -> {
+                    if(deleteAllClinician())
+                    {
+                        Intent intent = new Intent(getApplicationContext(), AdminClinicianPage.class);
+                        startActivity(intent);
+                    }
+                    dialog.dismiss();
+                })
+                .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        dialog.dismiss();
+
+                    }
+                })
+                .create();
+
+        myQuittingDialogBox.show();
+
     }
 
     private boolean deleteAllClinician()

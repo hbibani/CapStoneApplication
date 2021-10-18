@@ -2,11 +2,13 @@ package my.bop.finalassignment;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -240,10 +242,29 @@ public class AdminRoleModifyPage extends AppCompatActivity implements Navigation
 
     public void deleteRoleButton(View view)
     {
-        if(deleteRoleDatabase())
-        {
-            startActivity(new Intent(AdminRoleModifyPage.this, AdminRolePage.class));
-        }
+        AlertDialog myQuittingDialogBox = new AlertDialog.Builder(this)
+                // set message, title, and icon
+                .setTitle("Delete")
+                .setMessage("Do you want to Delete")
+                .setIcon(R.drawable.ic_baseline_delete_forever_24)
+
+                .setPositiveButton("Delete", (dialog, whichButton) -> {
+                    if(deleteRoleDatabase())
+                    {
+                        startActivity(new Intent(AdminRoleModifyPage.this, AdminRolePage.class));
+                    }
+                    dialog.dismiss();
+                })
+                .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        dialog.dismiss();
+
+                    }
+                })
+                .create();
+
+        myQuittingDialogBox.show();
     }
 
     @Override

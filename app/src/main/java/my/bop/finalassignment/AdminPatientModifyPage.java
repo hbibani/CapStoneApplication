@@ -2,11 +2,13 @@ package my.bop.finalassignment;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -458,11 +460,32 @@ public class AdminPatientModifyPage extends AppCompatActivity implements Navigat
 
     public void DeletePatientButton(View view)
     {
-        if(deletePatientSingle())
-        {
-            Intent intent = new Intent(getApplicationContext(), AdminPatientPage.class);
-            startActivity(intent);
-        }
+        AlertDialog myQuittingDialogBox = new AlertDialog.Builder(this)
+                // set message, title, and icon
+                .setTitle("Delete")
+                .setMessage("Do you want to Delete")
+                .setIcon(R.drawable.ic_baseline_delete_forever_24)
+
+                .setPositiveButton("Delete", (dialog, whichButton) -> {
+                    if(deletePatientSingle())
+                    {
+                        Intent intent = new Intent(getApplicationContext(), AdminPatientPage.class);
+                        startActivity(intent);
+                    }
+                    dialog.dismiss();
+                })
+                .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        dialog.dismiss();
+
+                    }
+                })
+                .create();
+
+        myQuittingDialogBox.show();
+
+
     }
 
     private boolean deletePatientSingle()
@@ -511,23 +534,42 @@ public class AdminPatientModifyPage extends AppCompatActivity implements Navigat
 
     public void DeletePatientAllButton(View view)
     {
-        if(deletePatient())
-        {
-            Intent intent = new Intent(getApplicationContext(), AdminPatientPage.class);
-            startActivity(intent);
-        }
-        else
-        {
-            Intent intent = new Intent(getApplicationContext(), AdminPatientModifyPage.class);
-            intent.putExtra("mrn", mrn1);
-            intent.putExtra("age", age1);
-            intent.putExtra("weight", weight1);
-            intent.putExtra("gender", gender1);
-            intent.putExtra("userid", userID);
-            intent.putExtra("patientid", patientID1);
-            Toast.makeText(AdminPatientModifyPage.this, "Could not delete patient.", Toast.LENGTH_SHORT).show();
-            startActivity(intent);
-        }
+        AlertDialog myQuittingDialogBox = new AlertDialog.Builder(this)
+                // set message, title, and icon
+                .setTitle("Delete")
+                .setMessage("Do you want to Delete")
+                .setIcon(R.drawable.ic_baseline_delete_forever_24)
+
+                .setPositiveButton("Delete", (dialog, whichButton) -> {
+                    if(deletePatient())
+                    {
+                        Intent intent = new Intent(getApplicationContext(), AdminPatientPage.class);
+                        startActivity(intent);
+                    }
+                    else
+                    {
+                        Intent intent = new Intent(getApplicationContext(), AdminPatientModifyPage.class);
+                        intent.putExtra("mrn", mrn1);
+                        intent.putExtra("age", age1);
+                        intent.putExtra("weight", weight1);
+                        intent.putExtra("gender", gender1);
+                        intent.putExtra("userid", userID);
+                        intent.putExtra("patientid", patientID1);
+                        Toast.makeText(AdminPatientModifyPage.this, "Could not delete patient.", Toast.LENGTH_SHORT).show();
+                        startActivity(intent);
+                    }
+                    dialog.dismiss();
+                })
+                .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        dialog.dismiss();
+
+                    }
+                })
+                .create();
+
+        myQuittingDialogBox.show();
     }
 
     public void UpdateLoginDetails(View view)

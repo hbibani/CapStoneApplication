@@ -1,6 +1,7 @@
 package my.bop.finalassignment;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.finalassignment.R;
@@ -90,7 +92,27 @@ public class AdapterMedication extends RecyclerView.Adapter<RecyclerView.ViewHol
 
             button_des.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    deleteMed();
+
+                    AlertDialog myQuittingDialogBox = new AlertDialog.Builder(v.getContext())
+                            // set message, title, and icon
+                            .setTitle("Delete")
+                            .setMessage("Do you want to Delete")
+                            .setIcon(R.drawable.ic_baseline_delete_forever_24)
+
+                            .setPositiveButton("Delete", (dialog, whichButton) -> {
+                                deleteMed();
+                                dialog.dismiss();
+                            })
+                            .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+
+                                    dialog.dismiss();
+
+                                }
+                            })
+                            .create();
+
+                    myQuittingDialogBox.show();
                 }
             });
 

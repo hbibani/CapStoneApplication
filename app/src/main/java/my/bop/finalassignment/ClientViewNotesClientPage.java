@@ -1,9 +1,11 @@
 package my.bop.finalassignment;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -279,11 +281,31 @@ public class ClientViewNotesClientPage extends AppCompatActivity {
 
     public void DeleteNotes(View view)
     {
-        deletePatientInformation();
-        Intent intent = new Intent(getApplicationContext(), ClientAdmissionNotesPage.class);
-        intent.putExtra("mrn", mrn);
-        intent.putExtra("admissionid", admissionid);
-        startActivity(intent);
+        AlertDialog myQuittingDialogBox = new AlertDialog.Builder(this)
+                // set message, title, and icon
+                .setTitle("Delete")
+                .setMessage("Do you want to Delete")
+                .setIcon(R.drawable.ic_baseline_delete_forever_24)
+
+                .setPositiveButton("Delete", (dialog, whichButton) -> {
+                    deletePatientInformation();
+                    Intent intent = new Intent(getApplicationContext(), ClientAdmissionNotesPage.class);
+                    intent.putExtra("mrn", mrn);
+                    intent.putExtra("admissionid", admissionid);
+                    startActivity(intent);
+                    dialog.dismiss();
+                })
+                .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        dialog.dismiss();
+
+                    }
+                })
+                .create();
+
+        myQuittingDialogBox.show();
+
     }
 
     private void showDateTimeDialog(final EditText date_time_in)
