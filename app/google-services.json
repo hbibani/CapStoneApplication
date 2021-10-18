@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "895528345511",
+    "project_id": "ps2130",
+    "storage_bucket": "ps2130.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895528345511:android:f06bcb81755755ca52a082",
+        "android_client_info": {
+          "package_name": "my.bop.finalassignment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "895528345511-7ac7bga9rghak50pf7kujf91vkehs553.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcqBGmXcqO4yAjB0ijZg9Q0E_Kj6fZtBY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "895528345511-7ac7bga9rghak50pf7kujf91vkehs553.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "5"
+}
