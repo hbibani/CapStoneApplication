@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FinalAssignment</string>
+    <string name="app_name">Burden Of Pain</string>
     <string-array name="Gender_Array">
         <item>Male</item>
         <item>Female</item>

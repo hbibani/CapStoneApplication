@@ -43,13 +43,14 @@
             android:id="@+id/mrn_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/admission_title"
             android:layout_marginLeft="0dp"
             android:layout_toRightOf="@id/bednumber"
-            android:layout_below="@id/admission_title"
             android:fontFamily="@font/poppinsbold"
             android:text="MRN:"
             android:textColor="@color/green"
             android:textSize="14sp" />
+
         <TextView
             android:id="@+id/gender_des"
             android:layout_width="wrap_content"
@@ -89,9 +90,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="0dp"
-            android:layout_marginRight="10dp"
             android:layout_marginTop="0dp"
-            >
+            android:layout_marginRight="10dp">
 
         </ImageView>
     </RelativeLayout>

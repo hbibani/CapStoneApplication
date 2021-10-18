@@ -11,8 +11,8 @@ android {
         applicationId "my.bop.finalassignment"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 5
-        versionName "5.0"
+        versionCode 7
+        versionName "7.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
