@@ -174,7 +174,6 @@ public class AdminAdmissionClinicianPage extends AppCompatActivity implements Na
                 switch (result)
                 {
                     case "None":
-                        Toast.makeText(AdminAdmissionClinicianPage.this, "No clinicians assigned.", Toast.LENGTH_SHORT).show();
                         break;
                     case "Error: Database connection":
                         Toast.makeText(AdminAdmissionClinicianPage.this, "Error: Database connection.", Toast.LENGTH_SHORT).show();

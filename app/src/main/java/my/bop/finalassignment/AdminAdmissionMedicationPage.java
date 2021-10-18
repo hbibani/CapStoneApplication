@@ -255,7 +255,6 @@ public class AdminAdmissionMedicationPage extends AppCompatActivity implements N
                 switch (result)
                 {
                     case "Not":
-                        Toast.makeText(AdminAdmissionMedicationPage.this, "No medications have been entered.", Toast.LENGTH_SHORT).show();
                         break;
                     case "Error: Database connection":
                         Toast.makeText(AdminAdmissionMedicationPage.this, "Error: Database connection.", Toast.LENGTH_SHORT).show();

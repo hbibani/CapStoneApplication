@@ -192,7 +192,6 @@ public class ClientAdmissionMedicationPage extends AppCompatActivity {
                 switch (result)
                 {
                     case "Not":
-                        Toast.makeText(ClientAdmissionMedicationPage.this, "No medications have been entered.", Toast.LENGTH_SHORT).show();
                         break;
                     case "Error: Database connection":
                         Toast.makeText(ClientAdmissionMedicationPage.this, "Error: Database connection.", Toast.LENGTH_SHORT).show();

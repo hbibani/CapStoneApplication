@@ -114,7 +114,6 @@ public class ClientAdmissionClinicianPage extends AppCompatActivity {
                 switch (result)
                 {
                     case "None":
-                        Toast.makeText(ClientAdmissionClinicianPage.this, "No clinicians assigned.", Toast.LENGTH_SHORT).show();
                         break;
                     case "Error: Database connection":
                         Toast.makeText(ClientAdmissionClinicianPage.this, "Error: Database connection.", Toast.LENGTH_SHORT).show();

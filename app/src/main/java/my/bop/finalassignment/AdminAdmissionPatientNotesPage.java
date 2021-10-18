@@ -337,7 +337,6 @@ public class AdminAdmissionPatientNotesPage extends AppCompatActivity implements
                 switch (result)
                 {
                     case "None":
-                        Toast.makeText(AdminAdmissionPatientNotesPage.this, "No notes have been entered.", Toast.LENGTH_SHORT).show();
                         break;
                     case "Error: Database connection":
                         Toast.makeText(AdminAdmissionPatientNotesPage.this, "Error: Database connection.", Toast.LENGTH_SHORT).show();

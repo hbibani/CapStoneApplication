@@ -147,7 +147,6 @@ public class ClientAdmissionModifyGraphPage extends AppCompatActivity {
                 switch (result)
                 {
                     case "Not":
-                        Toast.makeText(ClientAdmissionModifyGraphPage.this, "No pain inputs.", Toast.LENGTH_SHORT).show();
                         break;
                     case "Error: Database connection":
                         Toast.makeText(ClientAdmissionModifyGraphPage.this, "Error: Database connection.", Toast.LENGTH_SHORT).show();

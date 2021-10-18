@@ -302,7 +302,6 @@ public class ClientAdmissionNotesPage extends AppCompatActivity
                     switch (result)
                     {
                         case "None":
-                            Toast.makeText(ClientAdmissionNotesPage.this, "No notes have been entered.", Toast.LENGTH_SHORT).show();
                             break;
                         case "Error: Database connection":
                             Toast.makeText(ClientAdmissionNotesPage.this, "Error: Database connection.", Toast.LENGTH_SHORT).show();

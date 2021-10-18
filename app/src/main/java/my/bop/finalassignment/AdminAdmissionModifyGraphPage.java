@@ -173,7 +173,6 @@ public class AdminAdmissionModifyGraphPage extends AppCompatActivity implements 
                 switch (result)
                 {
                     case "Not":
-                        Toast.makeText(AdminAdmissionModifyGraphPage.this, "No pain inputs.", Toast.LENGTH_SHORT).show();
                         break;
                     case "Error: Database connection":
                         Toast.makeText(AdminAdmissionModifyGraphPage.this, "Error: Database connection.", Toast.LENGTH_SHORT).show();
