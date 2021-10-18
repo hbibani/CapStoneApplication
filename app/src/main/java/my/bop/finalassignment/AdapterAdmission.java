@@ -56,11 +56,11 @@ public class AdapterAdmission extends RecyclerView.Adapter<RecyclerView.ViewHold
         myHolder.endtime_des.setText("End Time: " + current.endtime);
         if (current.concerned.equals("1"))
         {
-            myHolder.viewimage.setImageURI(Uri.parse("android.resource://com.example.finalassignment/drawable/danger_patients2"));
+            myHolder.viewimage.setImageURI(Uri.parse("android.resource://my.bop.finalassignment/drawable/danger_patients2"));
         }
         else
         {
-            myHolder.viewimage.setImageURI(Uri.parse("android.resource://com.example.finalassignment/drawable/all_patients"));
+            myHolder.viewimage.setImageURI(Uri.parse("android.resource://my.bop.finalassignment/drawable/all_patients"));
         }
 
     }
