@@ -52,11 +52,11 @@ public class AdapterGraph extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         myHolder.gender_des.setText("Gender: " + current.patientGender);
         if (current.concerned.equals("1"))
         {
-            myHolder.viewimage.setImageURI(Uri.parse("android.resource://com.example.finalassignment/drawable/danger_patients2"));
+            myHolder.viewimage.setImageURI(Uri.parse("android.resource://my.bop.finalassignment/drawable/danger_patients2"));
         }
         else
         {
-            myHolder.viewimage.setImageURI(Uri.parse("android.resource://com.example.finalassignment/drawable/all_patients"));
+            myHolder.viewimage.setImageURI(Uri.parse("android.resource://my.bop.finalassignment/drawable/all_patients"));
         }
 
     }
