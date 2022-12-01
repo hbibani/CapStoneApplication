@@ -49,6 +49,7 @@
             android:src="@drawable/icon_noteslist">
         </ImageView>
     </RelativeLayout>
+
     <Button
         android:id="@+id/button_des"
         style="@style/Widget.AppCompat.Button.Colored"

@@ -5,7 +5,6 @@ import android.app.job.JobService;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Handler;
-import android.util.Log;
 
 import androidx.annotation.RequiresApi;
 

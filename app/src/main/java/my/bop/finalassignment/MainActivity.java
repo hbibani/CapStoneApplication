@@ -120,7 +120,6 @@ EditText password1;
                     editor.putString("Username", usernameString);
                     editor.putString("Type", result );
                     editor.apply();
-
                     switch(result)
                     {
                         case "Role: '1'":

@@ -362,7 +362,6 @@ public class ClientViewGraphPage extends AppCompatActivity
                 switch (result)
                 {
                     case "Not":
-                        Toast.makeText(ClientViewGraphPage.this, "No pain inputs.", Toast.LENGTH_SHORT).show();
                         break;
                     case "Error: Database connection":
                         Toast.makeText(ClientViewGraphPage.this, "Error: Database connection.", Toast.LENGTH_SHORT).show();
@@ -414,7 +413,6 @@ public class ClientViewGraphPage extends AppCompatActivity
                 switch (result)
                 {
                     case "Not":
-                        Toast.makeText(ClientViewGraphPage.this, "No medication inputs.", Toast.LENGTH_SHORT).show();
                         break;
                     case "Error: Database connection":
                         Toast.makeText(ClientViewGraphPage.this, "Error: Database connection.", Toast.LENGTH_SHORT).show();
@@ -652,7 +650,6 @@ public class ClientViewGraphPage extends AppCompatActivity
             if (putData.onComplete())
             {
                 String result = putData.getResult();
-                Log.d("Max Value", result);
                 switch(result)
                 {
                     case "Success":

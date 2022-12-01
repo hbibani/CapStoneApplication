@@ -1,4 +1,4 @@
-package my.bop.finalassignment;
+package my.bop.finalassignment1;
 
 import org.junit.Test;
 

@@ -29,7 +29,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_clinician_modify_page.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_clinician_page.xml" value="0.22" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_clinician_search_page.xml" value="0.221875" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_home_page.xml" value="0.14" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_home_page.xml" value="0.13" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_medication_modify_page.xml" value="0.15" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_medication_page.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/activity_admin_medication_search_key_page.xml" value="0.22" />
@@ -75,7 +75,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/adapter_medication_admin.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/adapter_notes.xml" value="0.22916666666666666" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/adapter_notification.xml" value="0.2563405797101449" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/adapter_patient.xml" value="0.2046875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/adapter_patient.xml" value="0.22" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/adapter_role.xml" value="0.33" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/layout/nav_header_main.xml" value="0.10005065856129686" />
         <entry key="..\:/Users/User/AndroidStudioProjects/FinalAssignment/app/src/main/res/menu/activity_main_drawer.xml" value="0.16296296296296298" />

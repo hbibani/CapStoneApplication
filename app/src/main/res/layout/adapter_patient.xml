@@ -47,8 +47,6 @@
             android:layout_marginTop="0dp"
             android:src="@drawable/icon_patient_admin">
         </ImageView>
-
-
     </RelativeLayout>
 
 </RelativeLayout>
