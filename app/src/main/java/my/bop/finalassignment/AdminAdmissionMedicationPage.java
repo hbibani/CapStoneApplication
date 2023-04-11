@@ -191,7 +191,7 @@ public class AdminAdmissionMedicationPage extends AppCompatActivity implements N
 
     private void fetchSingleMedList()
     {
-        FetchData fetchData = new FetchData("http://bopps2130.net/fetchAllMeds.php");
+        FetchData fetchData = new FetchData("http://uphill-leaper.000webhostapp.com/fetchAllMeds.php");
         if (fetchData.startFetch())
         {
             if (fetchData.onComplete())
@@ -245,7 +245,7 @@ public class AdminAdmissionMedicationPage extends AppCompatActivity implements N
         String[] data = new String[1];
         data[0] = admissionid;
 
-        PutData putData = new PutData("http://bopps2130.net/getpatientmedication.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/getpatientmedication.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -382,7 +382,7 @@ public class AdminAdmissionMedicationPage extends AppCompatActivity implements N
         data[2] = datetime3;
         data[3] = doseAmountString;
 
-        PutData putData = new PutData("http://bopps2130.net/addmedicationtoadmission.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/addmedicationtoadmission.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

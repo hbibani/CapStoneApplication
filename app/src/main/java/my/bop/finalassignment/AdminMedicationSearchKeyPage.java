@@ -151,7 +151,7 @@ public class AdminMedicationSearchKeyPage extends AppCompatActivity  implements 
         String[] data = new String[1];
         data[0] = searchstring;
 
-        PutData putData = new PutData("http://bopps2130.net/searchmedicationwildcard.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/searchmedicationwildcard.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

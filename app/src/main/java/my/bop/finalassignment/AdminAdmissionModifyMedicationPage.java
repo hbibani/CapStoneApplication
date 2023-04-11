@@ -205,7 +205,7 @@ public class AdminAdmissionModifyMedicationPage extends AppCompatActivity implem
         String[] data = new String[1];
         data[0] = medicationstayID;
 
-        PutData putData = new PutData("http://bopps2130.net/clingetsinglemed.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/clingetsinglemed.php", "POST", field, data);
 
         if (putData.startPut())
         {
@@ -282,7 +282,7 @@ public class AdminAdmissionModifyMedicationPage extends AppCompatActivity implem
 
     private boolean fetchSingleMedList()
     {
-        FetchData fetchData = new FetchData("http://bopps2130.net/fetchAllMeds.php");
+        FetchData fetchData = new FetchData("http://uphill-leaper.000webhostapp.com/fetchAllMeds.php");
         if (fetchData.startFetch())
         {
             if (fetchData.onComplete())
@@ -334,7 +334,7 @@ public class AdminAdmissionModifyMedicationPage extends AppCompatActivity implem
         String[] data = new String[1];
         data[0] = medicationstayID;
 
-        PutData putData = new PutData("http://bopps2130.net/deletemedfromadmission.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/deletemedfromadmission.php", "POST", field, data);
 
         if (putData.startPut())
         {
@@ -412,7 +412,7 @@ public class AdminAdmissionModifyMedicationPage extends AppCompatActivity implem
         data[2] = datetime3;
         data[3] = doseamount;
 
-        PutData putData = new PutData("http://bopps2130.net/modifymedicationadmission.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/modifymedicationadmission.php", "POST", field, data);
 
         if (putData.startPut())
         {

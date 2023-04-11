@@ -95,7 +95,7 @@ public class ClientHomePage extends AppCompatActivity
     public void fetchActivePatientList()
     {
         data = new ArrayList<>();
-        FetchData fetchData = new FetchData("http://bopps2130.net/fetchActivePatients.php");
+        FetchData fetchData = new FetchData("http://uphill-leaper.000webhostapp.com/fetchActivePatients.php");
         if (fetchData.startFetch())
         {
             if (fetchData.onComplete())

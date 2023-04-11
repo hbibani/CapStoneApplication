@@ -131,7 +131,7 @@ public class ClientViewGraphOtherPage extends AppCompatActivity {
         String[] data = new String[1];
         data[0] = admissionid;
 
-        PutData putData = new PutData("http://bopps2130.net/getAllAdmissionDetails.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/getAllAdmissionDetails.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -312,7 +312,7 @@ public class ClientViewGraphOtherPage extends AppCompatActivity {
         data[1] = modifyBed;
 
 
-        PutData putData = new PutData("http://bopps2130.net/modifyBedNumber.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/modifyBedNumber.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -394,7 +394,7 @@ public class ClientViewGraphOtherPage extends AppCompatActivity {
         data[1] = updatepainregion;
         data[2] = updatepaintype;
 
-        PutData putData = new PutData("http://bopps2130.net/modifyPainDetails.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/modifyPainDetails.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -481,7 +481,7 @@ public class ClientViewGraphOtherPage extends AppCompatActivity {
         data[1] = timerforpain.getSelectedItem().toString();;
 
 
-        PutData putData = new PutData("http://bopps2130.net/modifyPainTimer.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/modifyPainTimer.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -530,7 +530,7 @@ public class ClientViewGraphOtherPage extends AppCompatActivity {
         data[1] = datetime3;
         data[2] = datetime4;
 
-        PutData putData = new PutData("http://bopps2130.net/modifyadmissiontime.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/modifyadmissiontime.php", "POST", field, data);
 
         if (putData.startPut())
         {
@@ -576,7 +576,7 @@ public class ClientViewGraphOtherPage extends AppCompatActivity {
         data[0] = admissionid;
         data[1] = statusupdate;
 
-        PutData putData = new PutData("http://bopps2130.net/updatestatusadmission.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/updatestatusadmission.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

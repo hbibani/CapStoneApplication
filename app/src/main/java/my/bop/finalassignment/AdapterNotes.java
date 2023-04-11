@@ -89,6 +89,11 @@ public class AdapterNotes extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
 
                             .setPositiveButton("Delete", (dialog, whichButton) -> {
                                 deleteNote();
+                                if(context instanceof ClientAdmissionNotesPage)
+                                {
+                                    ((ClientAdmissionNotesPage)context).initializeNotesList();
+                                }
+
                                 dialog.dismiss();
                             })
                             .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
@@ -124,7 +129,7 @@ public class AdapterNotes extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
             String[] data = new String[1];
             data[0] = patientnotesid;
 
-            PutData putData = new PutData("http://bopps2130.net/deletenotespatient.php", "POST", field, data);
+            PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/deletenotespatient.php", "POST", field, data);
 
             if (putData.startPut())
             {
@@ -139,10 +144,6 @@ public class AdapterNotes extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
                 }
             }
 
-            Intent intent = new Intent(context, ClientAdmissionNotesPage.class);
-            intent.putExtra("mrn", mrnget);
-            intent.putExtra("admissionid", admissionget);
-            context.startActivity(intent);
         }
 
         @Override

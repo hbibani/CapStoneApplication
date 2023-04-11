@@ -106,7 +106,7 @@ public class AdminRoleModifyPage extends AppCompatActivity implements Navigation
         data[1] = rolenamestring2;
         data[2] = rolepowerstring2;
 
-        PutData putData = new PutData("http://bopps2130.net/modifyroledetails.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/modifyroledetails.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -214,7 +214,7 @@ public class AdminRoleModifyPage extends AppCompatActivity implements Navigation
         String[] data = new String[1];
         data[0] = roleidstring;
 
-        PutData putData = new PutData("http://bopps2130.net/deleterole.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/deleterole.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

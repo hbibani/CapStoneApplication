@@ -146,7 +146,7 @@ public class AdminAdmissionModifyPatientNotesPage extends AppCompatActivity impl
         String[] data = new String[1];
         data[0] = patientnotesid;
 
-        PutData putData = new PutData("http://bopps2130.net/getsinglenotes.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/getsinglenotes.php", "POST", field, data);
 
         if (putData.startPut())
         {
@@ -194,7 +194,7 @@ public class AdminAdmissionModifyPatientNotesPage extends AppCompatActivity impl
         data[1] = notes;
         data[2] = datetime3;
 
-        PutData putData = new PutData("http://bopps2130.net/modifypatientnotes.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/modifypatientnotes.php", "POST", field, data);
 
         if (putData.startPut())
         {
@@ -231,7 +231,7 @@ public class AdminAdmissionModifyPatientNotesPage extends AppCompatActivity impl
         String[] data = new String[1];
         data[0] = patientnotesid;
 
-        PutData putData = new PutData("http://bopps2130.net/deletenotespatient.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/deletenotespatient.php", "POST", field, data);
 
         if (putData.startPut())
         {

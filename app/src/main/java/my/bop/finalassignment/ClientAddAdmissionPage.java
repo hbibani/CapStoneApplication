@@ -253,7 +253,7 @@ public class ClientAddAdmissionPage extends AppCompatActivity
         data[4] = bedNumberString;
         data[5] = timerforpainscore;
 
-        PutData putData = new PutData("http://bopps2130.net/clientaddadmission.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/clientaddadmission.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

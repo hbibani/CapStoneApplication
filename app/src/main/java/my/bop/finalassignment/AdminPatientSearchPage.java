@@ -92,7 +92,7 @@ public class AdminPatientSearchPage extends AppCompatActivity implements Navigat
         String[] data = new String[1];
         data[0] = mrnnumber;
 
-        PutData putData = new PutData("http://bopps2130.net/adminsearchpatient.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/adminsearchpatient.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

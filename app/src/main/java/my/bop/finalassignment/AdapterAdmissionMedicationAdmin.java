@@ -134,7 +134,7 @@ public class AdapterAdmissionMedicationAdmin extends RecyclerView.Adapter<Recycl
             String[] data = new String[1];
             data[0] = medicationstayid;
 
-            PutData putData = new PutData("http://bopps2130.net/deletemedfromadmission.php", "POST", field, data);
+            PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/deletemedfromadmission.php", "POST", field, data);
 
             if (putData.startPut())
             {

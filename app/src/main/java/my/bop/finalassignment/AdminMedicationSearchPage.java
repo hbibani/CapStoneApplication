@@ -83,7 +83,7 @@ public class AdminMedicationSearchPage extends AppCompatActivity implements Navi
     {
         data1 = new ArrayList<>();
 
-        FetchData fetchData = new FetchData("http://bopps2130.net/getallmeds.php");
+        FetchData fetchData = new FetchData("http://uphill-leaper.000webhostapp.com/getallmeds.php");
         if (fetchData.startFetch())
         {
             if (fetchData.onComplete())

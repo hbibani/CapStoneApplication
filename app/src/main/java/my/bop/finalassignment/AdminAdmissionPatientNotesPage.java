@@ -211,7 +211,7 @@ public class AdminAdmissionPatientNotesPage extends AppCompatActivity implements
         data[1] = notesdata;
         data[2] = datetime3;
 
-        PutData putData = new PutData("http://bopps2130.net/addpatientnotestoadmission.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/addpatientnotestoadmission.php", "POST", field, data);
 
         if (putData.startPut()) {
 
@@ -328,7 +328,7 @@ public class AdminAdmissionPatientNotesPage extends AppCompatActivity implements
         String[] data = new String[1];
         data[0] = admissionid;
 
-        PutData putData = new PutData("http://bopps2130.net/getadmissionnoteslist.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/getadmissionnoteslist.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

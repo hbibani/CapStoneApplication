@@ -52,9 +52,9 @@ public class ClientAdmissionMedicationPage extends AppCompatActivity {
     JSONArray med;
     JSONArray med2;
     String medicationID;
-    private RecyclerView mRVMedication;
-    private AdapterMedication mAdapter;
-    List<DataMed> data1;
+    public RecyclerView mRVMedication;
+    public AdapterMedication mAdapter;
+    public List<DataMed> data1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,7 +120,7 @@ public class ClientAdmissionMedicationPage extends AppCompatActivity {
         }
     }
 
-    private void initializeMedicationList()
+    public void initializeMedicationList()
     {
         medicationSingleList = new ArrayList<String>();
         fetchSingleMedList();
@@ -130,7 +130,7 @@ public class ClientAdmissionMedicationPage extends AppCompatActivity {
 
     private void fetchSingleMedList()
     {
-        FetchData fetchData = new FetchData("http://bopps2130.net/fetchAllMeds.php");
+        FetchData fetchData = new FetchData("http://uphill-leaper.000webhostapp.com/fetchAllMeds.php");
         if (fetchData.startFetch())
         {
             if (fetchData.onComplete())
@@ -171,7 +171,7 @@ public class ClientAdmissionMedicationPage extends AppCompatActivity {
         }
     }
 
-    private void fetchPatientMedList()
+    public void fetchPatientMedList()
     {
         data1 = new ArrayList<>();
 
@@ -182,7 +182,7 @@ public class ClientAdmissionMedicationPage extends AppCompatActivity {
         String[] data = new String[1];
         data[0] = admissionid;
 
-        PutData putData = new PutData("http://bopps2130.net/getpatientmedication.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/getpatientmedication.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -192,7 +192,15 @@ public class ClientAdmissionMedicationPage extends AppCompatActivity {
                 switch (result)
                 {
                     case "Not":
-                        break;
+                    {
+                        data1.clear();
+                        // Setup and Handover data to recyclerview
+                        mRVMedication = (RecyclerView)findViewById(R.id.admissionList2);
+                        mAdapter = new AdapterMedication(ClientAdmissionMedicationPage.this, data1);
+                        mRVMedication.setAdapter(mAdapter);
+                        mRVMedication.setLayoutManager(new LinearLayoutManager(ClientAdmissionMedicationPage.this));
+                    }
+                    break;
                     case "Error: Database connection":
                         Toast.makeText(ClientAdmissionMedicationPage.this, "Error: Database connection.", Toast.LENGTH_SHORT).show();
                         break;
@@ -200,31 +208,39 @@ public class ClientAdmissionMedicationPage extends AppCompatActivity {
                     {
                         try
                         {
-                            med = new JSONArray(result);
+
                             data1.clear();
-                            for(int i = 0; i < med.length();i++)
-                            {
 
-                                JSONObject names = med.getJSONObject(i);
-                                DataMed medData = new DataMed();
-                                medData.patientmrn = mrn;
-                                medData.admissionid = admissionid;
-                                medData.medicationStayId = names.getString("MedicationStayID");
-                                medData.medID = names.getString("MedicationID");
-                                medData.brandName = names.getString("MedBrand");
-                                medData.chemName = names.getString("MedChemName");
-                                medData.doseForm = names.getString("DoseForm");
-                                medData.dosageName = names.getString("Dosage");
-                                medData.doseAmount = names.getString("Amount");
-                                medData.time = names.getString("Time");
-                                data1.add(medData);
-                            }
 
-                            // Setup and Handover data to recyclerview
-                            mRVMedication = (RecyclerView)findViewById(R.id.admissionList2);
-                            mAdapter = new AdapterMedication(ClientAdmissionMedicationPage.this, data1);
-                            mRVMedication.setAdapter(mAdapter);
-                            mRVMedication.setLayoutManager(new LinearLayoutManager(ClientAdmissionMedicationPage.this));
+                            med = new JSONArray(result);
+
+
+                                for(int i = 0; i < med.length();i++)
+                                {
+
+                                    JSONObject names = med.getJSONObject(i);
+                                    DataMed medData = new DataMed();
+                                    medData.patientmrn = mrn;
+                                    medData.admissionid = admissionid;
+                                    medData.medicationStayId = names.getString("MedicationStayID");
+                                    medData.medID = names.getString("MedicationID");
+                                    medData.brandName = names.getString("MedBrand");
+                                    medData.chemName = names.getString("MedChemName");
+                                    medData.doseForm = names.getString("DoseForm");
+                                    medData.dosageName = names.getString("Dosage");
+                                    medData.doseAmount = names.getString("Amount");
+                                    medData.time = names.getString("Time");
+                                    data1.add(medData);
+                                }
+
+                                // Setup and Handover data to recyclerview
+                                mRVMedication = (RecyclerView)findViewById(R.id.admissionList2);
+                                mAdapter = new AdapterMedication(ClientAdmissionMedicationPage.this, data1);
+                                mRVMedication.setAdapter(mAdapter);
+                                mRVMedication.setLayoutManager(new LinearLayoutManager(ClientAdmissionMedicationPage.this));
+
+
+
 
                         }
                         catch (JSONException e)
@@ -248,10 +264,7 @@ public class ClientAdmissionMedicationPage extends AppCompatActivity {
         if (validatedate && validatedoseform && validatemedication)
         {
             addMedicationToPatient(medicationID, doseAmountString);
-            Intent intent = new Intent(getApplicationContext(), ClientAdmissionMedicationPage.class);
-            intent.putExtra("mrn", mrn);
-            intent.putExtra("admissionid", admissionid);
-            startActivity(intent);
+            fetchPatientMedList();
         }
     }
 
@@ -321,7 +334,7 @@ public class ClientAdmissionMedicationPage extends AppCompatActivity {
         data[2] = datetime3;
         data[3] = doseamountstringinside;
 
-        PutData putData = new PutData("http://bopps2130.net/addmedicationtoadmission.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/addmedicationtoadmission.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

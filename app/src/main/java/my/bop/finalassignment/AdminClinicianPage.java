@@ -210,7 +210,7 @@ public class AdminClinicianPage extends AppCompatActivity implements NavigationV
         data[2] = staffnumber;
         data[3] = cliniciantype;
 
-        PutData putData = new PutData("http://bopps2130.net/addnewclinician.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/addnewclinician.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

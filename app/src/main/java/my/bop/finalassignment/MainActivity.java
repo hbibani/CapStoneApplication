@@ -110,7 +110,7 @@ EditText password1;
             data[1] = passwordString;
             data[2] = Token;
 
-            PutData putData = new PutData("http://bopps2130.net/login.php", "POST", field, data);
+            PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/login.php", "POST", field, data);
             if (putData.startPut())
             {
                 if (putData.onComplete())
@@ -161,7 +161,7 @@ EditText password1;
         data[0] = usernameString;
 
 
-        PutData putData = new PutData("http://bopps2130.net/getpatientmrnlogin.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/getpatientmrnlogin.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

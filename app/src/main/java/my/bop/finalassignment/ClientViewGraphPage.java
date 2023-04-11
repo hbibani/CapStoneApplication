@@ -98,58 +98,7 @@ public class ClientViewGraphPage extends AppCompatActivity
 
             if(getNeededValues())
             {
-                dataVals1 = new ArrayList<Entry>();
-                dataVals2 = new ArrayList<Entry>();
-                dataValues1();
-                dataValues2();
-                setDataValEntries();
-                mpLineChart = findViewById(R.id.line_chart);
-                LineDataSet lineDataSet1 = new LineDataSet(dataVals1, "Data set 1");
-                LineDataSet lineDataSet2 = new LineDataSet(dataVals2, "Data set 2");
-                lineDataSet1.setColor(Color.WHITE);
-                lineDataSet1.setCircleColor(Color.BLACK);
-                lineDataSet1.setCircleHoleRadius(5);
-                lineDataSet1.setValueTextSize(0);
-                lineDataSet2.setLineWidth(5);
-                lineDataSet2.setCircleRadius(5);
-                lineDataSet2.setCircleHoleRadius(1);
-                ArrayList<ILineDataSet> dataSets = new ArrayList<>();
-                dataSets.add(lineDataSet1);
-                dataSets.add(lineDataSet2);
-                XAxis xAxis = mpLineChart.getXAxis();
-                xAxis.setGranularity(1.0f);
-                YAxis yAxis = mpLineChart.getAxisRight();
-                yAxis.setGranularity(1.0f);
-                YAxis yAxis2 = mpLineChart.getAxisLeft();
-                mpLineChart.getAxisLeft().setAxisMaxValue(13.0f);
-                mpLineChart.getAxisLeft().setAxisMinValue(0f);
-                mpLineChart.getAxisRight().setAxisMaxValue(13.0f);
-                mpLineChart.getAxisRight().setAxisMinValue(-1f);
-                mpLineChart.setBackgroundColor(Color.WHITE);
-                mpLineChart.setNoDataText("No Data");
-                mpLineChart.setNoDataTextColor(Color.BLUE);
-                mpLineChart.setDrawGridBackground(false);
-                Description description = new Description();
-                description.setText("Pain Graph");
-                description.setTextColor(Color.GREEN);
-                description.setTextSize(15);
-                mpLineChart.setDescription(description);
-                Legend legend;
-                legend = mpLineChart.getLegend();
-                legend.setEnabled(true);
-                LegendEntry[] legendEntries = new LegendEntry[2];
-                LegendEntry entry1 = new LegendEntry();
-                entry1.formColor = Color.BLACK;
-                entry1.label = "Medicine";
-                legendEntries[0] = entry1;
-                LegendEntry entry2 = new LegendEntry();
-                entry2.formColor = Color.CYAN;
-                entry2.label = "Pain Score";
-                legendEntries[1] = entry2;
-                legend.setCustom(legendEntries);
-                LineData data = new LineData(dataSets);
-                mpLineChart.setData(data);
-                mpLineChart.invalidate();
+                graphMake();
                 painInput = (SeekBar) findViewById(R.id.seekBar);
                 date_time_in2 =findViewById(R.id.date_time_input3);
                 date_time_in2.setInputType(InputType.TYPE_NULL);
@@ -171,6 +120,65 @@ public class ClientViewGraphPage extends AppCompatActivity
         }
     }
 
+    //set the graph
+
+    public void graphMake()
+    {
+        dataVals1 = new ArrayList<Entry>();
+        dataVals2 = new ArrayList<Entry>();
+        dataValues1();
+        dataValues2();
+        setDataValEntries();
+        mpLineChart = findViewById(R.id.line_chart);
+        LineDataSet lineDataSet1 = new LineDataSet(dataVals1, "Data set 1");
+        LineDataSet lineDataSet2 = new LineDataSet(dataVals2, "Data set 2");
+        lineDataSet1.setColor(Color.WHITE);
+        lineDataSet1.setCircleColor(Color.BLACK);
+        lineDataSet1.setCircleHoleRadius(5);
+        lineDataSet1.setValueTextSize(0);
+        lineDataSet2.setLineWidth(5);
+        lineDataSet2.setCircleRadius(5);
+        lineDataSet2.setCircleHoleRadius(1);
+        ArrayList<ILineDataSet> dataSets = new ArrayList<>();
+        dataSets.add(lineDataSet1);
+        dataSets.add(lineDataSet2);
+        XAxis xAxis = mpLineChart.getXAxis();
+        xAxis.setGranularity(1.0f);
+        YAxis yAxis = mpLineChart.getAxisRight();
+        yAxis.setGranularity(1.0f);
+        YAxis yAxis2 = mpLineChart.getAxisLeft();
+        mpLineChart.getAxisLeft().setAxisMaxValue(13.0f);
+        mpLineChart.getAxisLeft().setAxisMinValue(0f);
+        mpLineChart.getAxisRight().setAxisMaxValue(13.0f);
+        mpLineChart.getAxisRight().setAxisMinValue(-1f);
+        mpLineChart.setBackgroundColor(Color.WHITE);
+        mpLineChart.setNoDataText("No Data");
+        mpLineChart.setNoDataTextColor(Color.BLUE);
+        mpLineChart.setDrawGridBackground(false);
+        Description description = new Description();
+        description.setText("Pain Graph");
+        description.setTextColor(Color.GREEN);
+        description.setTextSize(15);
+        mpLineChart.setDescription(description);
+        Legend legend;
+        legend = mpLineChart.getLegend();
+        legend.setEnabled(true);
+        LegendEntry[] legendEntries = new LegendEntry[2];
+        LegendEntry entry1 = new LegendEntry();
+        entry1.formColor = Color.BLACK;
+        entry1.label = "Medicine";
+        legendEntries[0] = entry1;
+        LegendEntry entry2 = new LegendEntry();
+        entry2.formColor = Color.CYAN;
+        entry2.label = "Pain Score";
+        legendEntries[1] = entry2;
+        legend.setCustom(legendEntries);
+        LineData data = new LineData(dataSets);
+        mpLineChart.setData(data);
+        mpLineChart.invalidate();
+    }
+
+
     public boolean getNeededValues()
     {
         String[] field = new String[1];
@@ -180,7 +188,7 @@ public class ClientViewGraphPage extends AppCompatActivity
         String[] data = new String[1];
         data[0] = admissionid;
 
-        PutData putData = new PutData("http://bopps2130.net/getAdmissionGraphPage.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/getAdmissionGraphPage.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -353,7 +361,7 @@ public class ClientViewGraphPage extends AppCompatActivity
         String[] data = new String[1];
         data[0] = graphid;
 
-        PutData putData = new PutData("http://bopps2130.net/getgraphvaluesandtime.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/getgraphvaluesandtime.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -403,7 +411,7 @@ public class ClientViewGraphPage extends AppCompatActivity
         String[] data = new String[1];
         data[0] = admissionid;
 
-        PutData putData = new PutData("http://bopps2130.net/getpatientmedication.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/getpatientmedication.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -595,10 +603,8 @@ public class ClientViewGraphPage extends AppCompatActivity
 
                 }
 
-                Intent intent = new Intent(getApplicationContext(), ClientViewGraphPage.class);
-                intent.putExtra("mrn", mrn);
-                intent.putExtra("admissionid", admissionid);
-                startActivity(intent);
+                graphMake();
+                initializeList();
             }
         }
     }
@@ -606,6 +612,16 @@ public class ClientViewGraphPage extends AppCompatActivity
 
     private boolean validateDatePain(String datetime22) throws ParseException
     {
+        if(datetime22.isEmpty())
+        {
+            date_time_in2.setError("Field cannot be empty");
+            return false;
+        }
+
+        date_time_in2.setError(null);
+
+
+
         SimpleDateFormat sdformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date date = new Date(System.currentTimeMillis());
         double epoch1 = date.getTime();
@@ -617,16 +633,7 @@ public class ClientViewGraphPage extends AppCompatActivity
             return false;
         }
 
-        if(datetime22.isEmpty())
-        {
-            date_time_in2.setError("Field cannot be empty");
-            return false;
-        }
-        else
-        {
-            date_time_in2.setError(null);
-            return true;
-        }
+        return true;
     }
 
     private boolean addPainScoreToDataBase(String painscore)
@@ -644,7 +651,7 @@ public class ClientViewGraphPage extends AppCompatActivity
         data[2] = graphid;
         data[3] = datetime2;
 
-        PutData putData = new PutData("http://bopps2130.net/inputpainscoreclinadmin.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/inputpainscoreclinadmin.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

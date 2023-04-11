@@ -139,7 +139,7 @@ public class ClientViewMedicationClientPage extends AppCompatActivity
         String[] data = new String[1];
         data[0] = medicationstayID;
 
-        PutData putData = new PutData("http://bopps2130.net/clingetsinglemed.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/clingetsinglemed.php", "POST", field, data);
 
         if (putData.startPut())
         {
@@ -210,7 +210,7 @@ public class ClientViewMedicationClientPage extends AppCompatActivity
 
     private boolean fetchSingleMedList()
     {
-        FetchData fetchData = new FetchData("http://bopps2130.net/fetchAllMeds.php");
+        FetchData fetchData = new FetchData("http://uphill-leaper.000webhostapp.com/fetchAllMeds.php");
         if (fetchData.startFetch())
         {
             if (fetchData.onComplete())
@@ -262,7 +262,7 @@ public class ClientViewMedicationClientPage extends AppCompatActivity
         String[] data = new String[1];
         data[0] = medicationstayID;
 
-        PutData putData = new PutData("http://bopps2130.net/deletemedfromadmission.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/deletemedfromadmission.php", "POST", field, data);
 
         if (putData.startPut())
         {
@@ -372,7 +372,7 @@ public class ClientViewMedicationClientPage extends AppCompatActivity
         data[2] = datetime3;
         data[3] = doseamount;
 
-        PutData putData = new PutData("http://bopps2130.net/modifymedicationadmission.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/modifymedicationadmission.php", "POST", field, data);
 
         if (putData.startPut())
         {
@@ -407,12 +407,13 @@ public class ClientViewMedicationClientPage extends AppCompatActivity
         {
             if(modifyPatientMedication(medicationIDChanger))
             {
-                Intent intent = new Intent(getApplicationContext(), ClientViewMedicationClientPage.class);
-                intent.putExtra("mrn", mrn);
-                intent.putExtra("admissionid", admissionid);
-                intent.putExtra("medicationstayid", medicationstayID);
-                intent.putExtra("medicationid", medicationIDChanger);
-                startActivity(intent);
+
+                Intent intent = getIntent();
+                medicationid2 = medicationIDChanger;
+                intent.putExtra("medicationid", medicationid2);
+                initializeMedicationList();
+                Toast.makeText(ClientViewMedicationClientPage.this, "Successfully modified medication.", Toast.LENGTH_SHORT).show();
+
             }
             else
             {
@@ -421,6 +422,7 @@ public class ClientViewMedicationClientPage extends AppCompatActivity
                 intent.putExtra("admissionid", admissionid);
                 intent.putExtra("medicationstayid", medicationstayID);
                 intent.putExtra("medicationid", medicationid2);
+                Toast.makeText(ClientViewMedicationClientPage.this, "Could not modify medication.", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }
 

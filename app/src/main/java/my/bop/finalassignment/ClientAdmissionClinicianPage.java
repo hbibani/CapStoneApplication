@@ -89,7 +89,7 @@ public class ClientAdmissionClinicianPage extends AppCompatActivity {
         }
     }
 
-    private void initializeClinicianListAdmission()
+    public void initializeClinicianListAdmission()
     {
         data1 = new ArrayList<>();
         fetchClinsAdmissionList();
@@ -104,17 +104,25 @@ public class ClientAdmissionClinicianPage extends AppCompatActivity {
         String[] data = new String[1];
         data[0] = admissionid;
 
-        PutData putData = new PutData("http://bopps2130.net/getclinicianadmissionlist.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/getclinicianadmissionlist.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
             {
                 String result = putData.getResult();
+                data1.clear();
 
                 switch (result)
                 {
                     case "None":
-                        break;
+                    {
+                        // Setup and Handover data to recyclerview
+                        mRVClinician = (RecyclerView)findViewById(R.id.admissionList2);
+                        mAdapter = new AdapterClinician(ClientAdmissionClinicianPage.this, data1);
+                        mRVClinician.setAdapter(mAdapter);
+                        mRVClinician.setLayoutManager(new LinearLayoutManager(ClientAdmissionClinicianPage.this));
+                    }
+                    break;
                     case "Error: Database connection":
                         Toast.makeText(ClientAdmissionClinicianPage.this, "Error: Database connection.", Toast.LENGTH_SHORT).show();
                         break;
@@ -123,8 +131,6 @@ public class ClientAdmissionClinicianPage extends AppCompatActivity {
                         try
                         {
                             clinician = new JSONArray(result);
-                            data1.clear();
-
                             for(int i = 0; i < clinician.length() ; i++)
                             {
 
@@ -169,7 +175,7 @@ public class ClientAdmissionClinicianPage extends AppCompatActivity {
 
     private boolean fetchSingleClinList()
     {
-        FetchData fetchData = new FetchData("http://bopps2130.net/fetchAllClin.php");
+        FetchData fetchData = new FetchData("http://uphill-leaper.000webhostapp.com/fetchAllClin.php");
         if (fetchData.startFetch())
         {
             if (fetchData.onComplete())
@@ -295,10 +301,7 @@ public class ClientAdmissionClinicianPage extends AppCompatActivity {
         {
             if (addClinToPatientdata())
             {
-                Intent intent = new Intent(getApplicationContext(),ClientAdmissionClinicianPage.class);
-                intent.putExtra("mrn", mrn);
-                intent.putExtra("admissionid", admissionid);
-                startActivity(intent);
+                initializeClinicianListAdmission();
             }
         }
     }
@@ -329,7 +332,7 @@ public class ClientAdmissionClinicianPage extends AppCompatActivity {
         data[0] = admissionid;
         data[1] = clinicianid2;
 
-        PutData putData = new PutData("http://bopps2130.net/addcliniciantoadmission.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/addcliniciantoadmission.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

@@ -82,6 +82,10 @@ public class AdapterClinician extends RecyclerView.Adapter<RecyclerView.ViewHold
 
                             .setPositiveButton("Delete", (dialog, whichButton) -> {
                                 deleteClinician();
+                                if(context instanceof ClientAdmissionClinicianPage)
+                                {
+                                    ((ClientAdmissionClinicianPage)context).initializeClinicianListAdmission();
+                                }
                                 dialog.dismiss();
                             })
                             .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
@@ -116,7 +120,7 @@ public class AdapterClinician extends RecyclerView.Adapter<RecyclerView.ViewHold
             String[] data = new String[1];
             data[0] = clinicianadmissionid;
 
-            PutData putData = new PutData("http://bopps2130.net/delclinicianadmission.php", "POST", field, data);
+            PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/delclinicianadmission.php", "POST", field, data);
 
             if (putData.startPut())
             {
@@ -130,10 +134,6 @@ public class AdapterClinician extends RecyclerView.Adapter<RecyclerView.ViewHold
                 }
             }
 
-            Intent intent = new Intent(context, ClientAdmissionClinicianPage.class);
-            intent.putExtra("mrn", mrnget);
-            intent.putExtra("admissionid", admissionget);
-            context.startActivity(intent);
         }
 
         @Override

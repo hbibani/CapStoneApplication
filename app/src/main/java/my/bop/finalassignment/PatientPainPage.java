@@ -168,7 +168,7 @@ public class PatientPainPage extends AppCompatActivity
         data[1] = painscore;
         data[2] = graphid;
 
-        PutData putData = new PutData("http://bopps2130.net/inputpainscore.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/inputpainscore.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -206,7 +206,7 @@ public class PatientPainPage extends AppCompatActivity
         data[0] = graphid;
         data[1] = maxTimer;
 
-        PutData putData = new PutData("http://bopps2130.net/checkpainbuttontime.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/checkpainbuttontime.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

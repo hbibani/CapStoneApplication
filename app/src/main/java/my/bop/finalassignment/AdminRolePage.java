@@ -79,7 +79,7 @@ public class AdminRolePage extends AppCompatActivity implements NavigationView.O
     {
         data1 = new ArrayList<>();
 
-        FetchData fetchData = new FetchData("http://bopps2130.net/fetchrolelist.php");
+        FetchData fetchData = new FetchData("http://uphill-leaper.000webhostapp.com/fetchrolelist.php");
         if (fetchData.startFetch())
         {
             if (fetchData.onComplete())
@@ -167,7 +167,7 @@ public class AdminRolePage extends AppCompatActivity implements NavigationView.O
         data[0] = rolenamestring;
         data[1] = rolepowerstring;
 
-        PutData putData = new PutData("http://bopps2130.net/addroletodatabase.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/addroletodatabase.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

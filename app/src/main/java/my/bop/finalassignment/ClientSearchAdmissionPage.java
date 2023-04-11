@@ -69,7 +69,7 @@ public class ClientSearchAdmissionPage extends AppCompatActivity
         String[] data = new String[1];
         data[0] = mrn;
 
-        PutData putData = new PutData("http://bopps2130.net/searchforpatientadmission.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/searchforpatientadmission.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

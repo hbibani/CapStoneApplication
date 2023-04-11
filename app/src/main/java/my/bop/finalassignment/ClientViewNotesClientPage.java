@@ -119,7 +119,7 @@ public class ClientViewNotesClientPage extends AppCompatActivity {
         String[] data = new String[1];
         data[0] = patientnotesid;
 
-        PutData putData = new PutData("http://bopps2130.net/getsinglenotes.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/getsinglenotes.php", "POST", field, data);
 
         if (putData.startPut())
         {
@@ -168,7 +168,7 @@ public class ClientViewNotesClientPage extends AppCompatActivity {
         data[1] = notes;
         data[2] = datetime3;
 
-        PutData putData = new PutData("http://bopps2130.net/modifypatientnotes.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/modifypatientnotes.php", "POST", field, data);
 
         if (putData.startPut())
         {
@@ -205,7 +205,7 @@ public class ClientViewNotesClientPage extends AppCompatActivity {
         String[] data = new String[1];
         data[0] = patientnotesid;
 
-        PutData putData = new PutData("http://bopps2130.net/deletenotespatient.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/deletenotespatient.php", "POST", field, data);
 
         if (putData.startPut())
         {
@@ -249,11 +249,7 @@ public class ClientViewNotesClientPage extends AppCompatActivity {
         if(validatenotes)
         {
             modifyPatientInformation(notes);
-            Intent intent = new Intent(getApplicationContext(), ClientViewNotesClientPage.class);
-            intent.putExtra("patientNotesID", patientnotesid);
-            intent.putExtra("mrn", mrn);
-            intent.putExtra("admissionid", admissionid);
-            startActivity(intent);
+            fetchNotes();
         }
     }
 

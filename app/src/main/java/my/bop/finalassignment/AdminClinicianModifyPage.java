@@ -129,7 +129,7 @@ public class AdminClinicianModifyPage extends AppCompatActivity implements Navig
         String[] data = new String[1];
         data[0] = userID;
 
-        PutData putData = new PutData("http://bopps2130.net/retusernameandpassword.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/retusernameandpassword.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -296,7 +296,7 @@ public class AdminClinicianModifyPage extends AppCompatActivity implements Navig
         data[1] = password2;
         data[2] = userID;
 
-        PutData putData = new PutData("http://bopps2130.net/updateclinusernamepassword.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/updateclinusernamepassword.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -334,7 +334,7 @@ public class AdminClinicianModifyPage extends AppCompatActivity implements Navig
         data[1] = cliniciantype2;
         data[2] = userID;
 
-        PutData putData = new PutData("http://bopps2130.net/updatecliniciandetails.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/updatecliniciandetails.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -400,7 +400,7 @@ public class AdminClinicianModifyPage extends AppCompatActivity implements Navig
         data[0] = userID;
 
 
-        PutData putData = new PutData("http://bopps2130.net/deleteclinician.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/deleteclinician.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -478,7 +478,7 @@ public class AdminClinicianModifyPage extends AppCompatActivity implements Navig
         data[1] = staffnumber;
 
 
-        PutData putData = new PutData("http://bopps2130.net/deleteAllclinician.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/deleteAllclinician.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

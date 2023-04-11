@@ -124,7 +124,7 @@ public class AdapterAdminPain extends RecyclerView.Adapter<RecyclerView.ViewHold
             String[] data = new String[1];
             data[0] = graphvalueid;
 
-            PutData putData = new PutData("http://bopps2130.net/deletegraphvalue.php", "POST", field, data);
+            PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/deletegraphvalue.php", "POST", field, data);
             if (putData.startPut())
             {
                 if (putData.onComplete())

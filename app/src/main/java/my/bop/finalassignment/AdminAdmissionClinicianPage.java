@@ -164,7 +164,7 @@ public class AdminAdmissionClinicianPage extends AppCompatActivity implements Na
         data[0] = admissionid;
 
 
-        PutData putData = new PutData("http://bopps2130.net/getclinicianadmissionlist.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/getclinicianadmissionlist.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -230,7 +230,7 @@ public class AdminAdmissionClinicianPage extends AppCompatActivity implements Na
 
     private boolean fetchSingleClinList()
     {
-        FetchData fetchData = new FetchData("http://bopps2130.net/fetchAllClin.php");
+        FetchData fetchData = new FetchData("http://uphill-leaper.000webhostapp.com/fetchAllClin.php");
         if (fetchData.startFetch())
         {
             if (fetchData.onComplete())
@@ -358,7 +358,7 @@ public class AdminAdmissionClinicianPage extends AppCompatActivity implements Na
         data[0] = admissionid;
         data[1] = clinicianid2;
 
-        PutData putData = new PutData("http://bopps2130.net/addcliniciantoadmission.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/addcliniciantoadmission.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

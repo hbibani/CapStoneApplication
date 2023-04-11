@@ -137,7 +137,7 @@ public class ClientAdmissionModifyGraphPage extends AppCompatActivity {
         String[] data = new String[1];
         data[0] = graphid;
 
-        PutData putData = new PutData("http://bopps2130.net/getgraphvaluesandtime.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/getgraphvaluesandtime.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -147,7 +147,16 @@ public class ClientAdmissionModifyGraphPage extends AppCompatActivity {
                 switch (result)
                 {
                     case "Not":
-                        break;
+                    {
+                        data1.clear();
+                        // Setup and Handover data to recyclerview
+                        mRVAdmission = (RecyclerView)findViewById(R.id.painlist);
+                        mAdapter = new AdapterClientPain(ClientAdmissionModifyGraphPage.this, data1);
+                        mRVAdmission.setAdapter(mAdapter);
+                        mRVAdmission.setLayoutManager(new LinearLayoutManager(ClientAdmissionModifyGraphPage.this));
+
+                    }
+                    break;
                     case "Error: Database connection":
                         Toast.makeText(ClientAdmissionModifyGraphPage.this, "Error: Database connection.", Toast.LENGTH_SHORT).show();
                         break;

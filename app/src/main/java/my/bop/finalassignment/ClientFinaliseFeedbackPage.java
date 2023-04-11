@@ -173,7 +173,7 @@ public class ClientFinaliseFeedbackPage extends AppCompatActivity
         data[3] = q3;
         data[4] = q4;
 
-        PutData putData = new PutData("http://bopps2130.net/modifyfeedbackadmission.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/modifyfeedbackadmission.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -209,7 +209,7 @@ public class ClientFinaliseFeedbackPage extends AppCompatActivity
         String[] data = new String[1];
         data[0] = admissionid;
 
-        PutData putData = new PutData("http://bopps2130.net/getadmissionvalues.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/getadmissionvalues.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -386,7 +386,7 @@ public class ClientFinaliseFeedbackPage extends AppCompatActivity
         data[3] = q3;
         data[4] = q4;
 
-        PutData putData = new PutData("http://bopps2130.net/addfeedbacktoadmission.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/addfeedbacktoadmission.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -433,7 +433,7 @@ public class ClientFinaliseFeedbackPage extends AppCompatActivity
         String[] data = new String[1];
         data[0] = admissionid;
 
-        PutData putData = new PutData("http://bopps2130.net/changeStatusAdmission.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/changeStatusAdmission.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -513,7 +513,7 @@ public class ClientFinaliseFeedbackPage extends AppCompatActivity
         String[] data = new String[1];
         data[0] = admissionid;
 
-        PutData putData = new PutData("http://bopps2130.net/deletefeedback.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/deletefeedback.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -583,7 +583,7 @@ public class ClientFinaliseFeedbackPage extends AppCompatActivity
         String[] data = new String[1];
         data[0] = admissionid;
 
-        PutData putData = new PutData("http://bopps2130.net/deleteadmissionadmin.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/deleteadmissionadmin.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

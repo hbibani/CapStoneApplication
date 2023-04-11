@@ -95,7 +95,7 @@ public class AdminAdmissionStaffPage extends AppCompatActivity implements Naviga
         String[] data = new String[1];
         data[0] = staffnumber;
 
-        PutData putData = new PutData("http://bopps2130.net/searchforstaffadmission.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/searchforstaffadmission.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

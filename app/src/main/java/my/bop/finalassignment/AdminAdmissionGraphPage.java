@@ -201,7 +201,7 @@ public class AdminAdmissionGraphPage extends AppCompatActivity implements Naviga
         String[] data = new String[1];
         data[0] = admissionid;
 
-        PutData putData = new PutData("http://bopps2130.net/getAdmissionGraphPage.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/getAdmissionGraphPage.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -382,7 +382,7 @@ public class AdminAdmissionGraphPage extends AppCompatActivity implements Naviga
         String[] data = new String[1];
         data[0] = graphid;
 
-        PutData putData = new PutData("http://bopps2130.net/getgraphvaluesandtime.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/getgraphvaluesandtime.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -434,7 +434,7 @@ public class AdminAdmissionGraphPage extends AppCompatActivity implements Naviga
         String[] data = new String[1];
         data[0] = admissionid;
 
-        PutData putData = new PutData("http://bopps2130.net/getpatientmedication.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/getpatientmedication.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -671,6 +671,12 @@ public class AdminAdmissionGraphPage extends AppCompatActivity implements Naviga
 
     private boolean validateDatePain(String datestringvalidate) throws ParseException
     {
+        if(datestringvalidate.isEmpty())
+        {
+            date_time_in2.setError("Field cannot be empty");
+            return false;
+        }
+
         SimpleDateFormat sdformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date date = new Date(System.currentTimeMillis());
         double epoch1 = date.getTime();
@@ -683,16 +689,11 @@ public class AdminAdmissionGraphPage extends AppCompatActivity implements Naviga
             return false;
         }
 
-        if(datestringvalidate.isEmpty())
-        {
-            date_time_in2.setError("Field cannot be empty");
-            return false;
-        }
-        else
-        {
-            date_time_in2.setError(null);
-            return true;
-        }
+
+
+        date_time_in2.setError(null);
+        return true;
+
     }
 
     private boolean addPainScoreToDataBase(String painscore)
@@ -710,7 +711,7 @@ public class AdminAdmissionGraphPage extends AppCompatActivity implements Naviga
         data[2] = graphid;
         data[3] = datetime2;
 
-        PutData putData = new PutData("http://bopps2130.net/inputpainscoreclinadmin.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/inputpainscoreclinadmin.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

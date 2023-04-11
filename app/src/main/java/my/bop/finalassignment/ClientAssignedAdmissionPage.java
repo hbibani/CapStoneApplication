@@ -99,7 +99,7 @@ public class ClientAssignedAdmissionPage extends AppCompatActivity
         String[] data = new String[1];
         data[0] = username ;
 
-        PutData putData = new PutData("http://bopps2130.net/getassignedpatientclinican.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/getassignedpatientclinican.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

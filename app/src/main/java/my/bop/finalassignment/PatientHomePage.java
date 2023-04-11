@@ -135,7 +135,7 @@ public class PatientHomePage extends AppCompatActivity
         String[] data = new String[1];
         data[0] = username;
 
-        PutData putData = new PutData("http://bopps2130.net/getadmissionforpain.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/getadmissionforpain.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -179,7 +179,7 @@ public class PatientHomePage extends AppCompatActivity
         String[] data = new String[1];
         data[0] = admissionid;
 
-        PutData putData = new PutData("http://bopps2130.net/getgraphid.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/getgraphid.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -211,7 +211,7 @@ public class PatientHomePage extends AppCompatActivity
         String[] data = new String[1];
         data[0] = admissionid;
 
-        PutData putData = new PutData("http://bopps2130.net/getclientdetails.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/getclientdetails.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -309,7 +309,7 @@ public class PatientHomePage extends AppCompatActivity
         data[0] = graphid;
         data[1] = maxCounter;
 
-        PutData putData = new PutData("http://bopps2130.net/checkpainbuttontime.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/checkpainbuttontime.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

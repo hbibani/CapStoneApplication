@@ -100,7 +100,13 @@ public class AdapterMedication extends RecyclerView.Adapter<RecyclerView.ViewHol
                             .setIcon(R.drawable.ic_baseline_delete_forever_24)
 
                             .setPositiveButton("Delete", (dialog, whichButton) -> {
-                                deleteMed();
+                                boolean test = deleteMed();
+
+                                if(context instanceof ClientAdmissionMedicationPage )
+                                {
+                                    ((ClientAdmissionMedicationPage)context).fetchPatientMedList();
+                                }
+
                                 dialog.dismiss();
                             })
                             .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
@@ -119,7 +125,7 @@ public class AdapterMedication extends RecyclerView.Adapter<RecyclerView.ViewHol
             med_title.setOnClickListener(this);
         }
 
-        private void deleteMed()
+        private boolean deleteMed()
         {
             int position = this.getAdapterPosition();
             DataMed medication = data.get(position);
@@ -134,7 +140,7 @@ public class AdapterMedication extends RecyclerView.Adapter<RecyclerView.ViewHol
             String[] data = new String[1];
             data[0] = medicationstayid;
 
-            PutData putData = new PutData("http://bopps2130.net/deletemedfromadmission.php", "POST", field, data);
+            PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/deletemedfromadmission.php", "POST", field, data);
 
             if (putData.startPut())
             {
@@ -142,14 +148,12 @@ public class AdapterMedication extends RecyclerView.Adapter<RecyclerView.ViewHol
                     String result = putData.getResult();
                     if (result.equals("Deleted"))
                     {
-                        Intent intent = new Intent(context, ClientAdmissionMedicationPage.class);
-                        intent.putExtra("mrn", mrnget);
-                        intent.putExtra("admissionid", admissionget);
-                        context.startActivity(intent);
-
+                        return true;
                     }
                 }
             }
+
+            return false;
         }
 
         @Override

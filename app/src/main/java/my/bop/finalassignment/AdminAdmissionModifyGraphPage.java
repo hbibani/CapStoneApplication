@@ -162,7 +162,7 @@ public class AdminAdmissionModifyGraphPage extends AppCompatActivity implements 
         String[] data = new String[1];
         data[0] = graphid;
 
-        PutData putData = new PutData("http://bopps2130.net/getgraphvaluesandtime.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/getgraphvaluesandtime.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

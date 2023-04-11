@@ -206,7 +206,7 @@ public class AdminMedicationPage extends AppCompatActivity implements Navigation
         data[2] = dosage;
         data[3] = doseform;
 
-        PutData putData = new PutData("http://bopps2130.net/addnewMedication.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/addnewMedication.php", "POST", field, data);
         Log.i("Check", "Before Start put.");
         if (putData.startPut())
         {

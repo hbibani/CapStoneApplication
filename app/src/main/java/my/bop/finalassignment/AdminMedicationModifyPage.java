@@ -230,7 +230,7 @@ public class AdminMedicationModifyPage extends AppCompatActivity implements Navi
         data[4] = doseform2;
 
         Log.i("Medicationid", medicationid);
-        PutData putData = new PutData("http://bopps2130.net/modifyMedicationAdmin.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/modifyMedicationAdmin.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -292,7 +292,7 @@ public class AdminMedicationModifyPage extends AppCompatActivity implements Navi
         String[] data = new String[1];
         data[0] = medicationid;
 
-        PutData putData = new PutData("http://bopps2130.net/deleteMedicationFromMeds.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/deleteMedicationFromMeds.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -352,7 +352,7 @@ public class AdminMedicationModifyPage extends AppCompatActivity implements Navi
         String[] data = new String[1];
         data[0] = medicationid;
 
-        PutData putData = new PutData("http://bopps2130.net/clearmedsfromsystem.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/clearmedsfromsystem.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

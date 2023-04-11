@@ -134,7 +134,7 @@ public class AdminPatientModifyPage extends AppCompatActivity implements Navigat
         String[] data = new String[1];
         data[0] = userID;
 
-        PutData putData = new PutData("http://bopps2130.net/retusernameandpassword.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/retusernameandpassword.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -203,7 +203,7 @@ public class AdminPatientModifyPage extends AppCompatActivity implements Navigat
         data[1] = password2;
         data[2] = userID;
 
-        PutData putData = new PutData("http://bopps2130.net/updatepatientusernameandpassword.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/updatepatientusernameandpassword.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -243,7 +243,7 @@ public class AdminPatientModifyPage extends AppCompatActivity implements Navigat
         data[3] = weight2;
         data[4] = userID;
 
-        PutData putData = new PutData("http://bopps2130.net/updatepatientdetails.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/updatepatientdetails.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -429,7 +429,7 @@ public class AdminPatientModifyPage extends AppCompatActivity implements Navigat
         String[] data = new String[2];
         data[0] = userID;
         data[1] = patientID1;
-        PutData putData = new PutData("http://bopps2130.net/deletepatient.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/deletepatient.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -498,7 +498,7 @@ public class AdminPatientModifyPage extends AppCompatActivity implements Navigat
         String[] data = new String[2];
         data[0] = userID;
         data[1] = patientID1;
-        PutData putData = new PutData("http://bopps2130.net/deletepatientsingle.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/deletepatientsingle.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

@@ -91,7 +91,12 @@ public class AdapterClientPain extends RecyclerView.Adapter<RecyclerView.ViewHol
                             .setIcon(R.drawable.ic_baseline_delete_forever_24)
 
                             .setPositiveButton("Delete", (dialog, whichButton) -> {
+
                                 deleteGraphItem();
+                                if(context instanceof ClientAdmissionModifyGraphPage)
+                                {
+                                    ((ClientAdmissionModifyGraphPage)context).fetchPainScoreList();
+                                }
                                 dialog.dismiss();
                             })
                             .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
@@ -126,7 +131,7 @@ public class AdapterClientPain extends RecyclerView.Adapter<RecyclerView.ViewHol
             data[0] = graphvalueid;
 
 
-            PutData putData = new PutData("http://bopps2130.net/deletegraphvalue.php", "POST", field, data);
+            PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/deletegraphvalue.php", "POST", field, data);
             if (putData.startPut())
             {
                 if (putData.onComplete())
@@ -142,11 +147,6 @@ public class AdapterClientPain extends RecyclerView.Adapter<RecyclerView.ViewHol
                 }
             }
 
-            Intent intent = new Intent(context, ClientAdmissionModifyGraphPage.class);
-            intent.putExtra("mrn", mrnget);
-            intent.putExtra("admissionid", admissionget);
-            intent.putExtra("graphid", graphid);
-            context.startActivity(intent);
         }
 
         @Override

@@ -108,7 +108,7 @@ public class AdminClinicianSearchPage extends AppCompatActivity implements Navig
         data[0] = staffnumber;
 
 
-        PutData putData = new PutData("http://bopps2130.net/searchclinician.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/searchclinician.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

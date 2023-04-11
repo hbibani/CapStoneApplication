@@ -249,7 +249,7 @@ public class AdminPatientPage extends AppCompatActivity implements NavigationVie
         data[3] = genderString;
         data[4] = ageString;
         data[5] = weightString;
-        PutData putData = new PutData("http://bopps2130.net/signup.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/signup.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

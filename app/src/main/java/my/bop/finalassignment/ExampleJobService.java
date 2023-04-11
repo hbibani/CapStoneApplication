@@ -44,7 +44,7 @@ public class ExampleJobService extends JobService
                     String[] data = new String[1];
                     data[0] = mrn;
 
-                    PutData putData = new PutData("http://bopps2130.net/send15pushnotification.php", "POST", field, data);
+                    PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/send15pushnotification.php", "POST", field, data);
                     if (putData.startPut())
                     {
                         if (putData.onComplete())
@@ -68,7 +68,7 @@ public class ExampleJobService extends JobService
         String[] data = new String[1];
         data[0] = admissionid;
 
-        PutData putData = new PutData("http://bopps2130.net/getTimerValue.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/getTimerValue.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())

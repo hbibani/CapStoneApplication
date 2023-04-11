@@ -84,10 +84,7 @@ public class ClientAdmissionNotesPage extends AppCompatActivity
         {
             if(addpatientnotestodatabase(notesdata))
             {
-                Intent intent = new Intent(getApplicationContext(), ClientAdmissionNotesPage.class);
-                intent.putExtra("mrn", mrn);
-                intent.putExtra("admissionid", admissionid);
-                startActivity(intent);
+                initializeNotesList();
             }
         }
     }
@@ -141,7 +138,7 @@ public class ClientAdmissionNotesPage extends AppCompatActivity
         data[1] = notesdata;
         data[2] = datetime3;
 
-        PutData putData = new PutData("http://bopps2130.net/addpatientnotestoadmission.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/addpatientnotestoadmission.php", "POST", field, data);
 
         if (putData.startPut())
         {
@@ -288,7 +285,7 @@ public class ClientAdmissionNotesPage extends AppCompatActivity
         String[] data = new String[1];
         data[0] = admissionid;
 
-        PutData putData = new PutData("http://bopps2130.net/getadmissionnoteslist.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/getadmissionnoteslist.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
@@ -296,18 +293,26 @@ public class ClientAdmissionNotesPage extends AppCompatActivity
                 String result = putData.getResult();
                 try
                 {
-                    notesarray = new JSONArray(result);
                     data1.clear();
 
                     switch (result)
                     {
                         case "None":
-                            break;
+                        {
+                            // Setup and Handover data to recyclerview
+                            mRVNotes = (RecyclerView)findViewById(R.id.admissionList2);
+                            mAdapter = new AdapterNotes(ClientAdmissionNotesPage.this, data1);
+                            mRVNotes.setAdapter(mAdapter);
+                            mRVNotes.setLayoutManager(new LinearLayoutManager(ClientAdmissionNotesPage.this));
+                        }
+                        break;
                         case "Error: Database connection":
                             Toast.makeText(ClientAdmissionNotesPage.this, "Error: Database connection.", Toast.LENGTH_SHORT).show();
                             break;
                         default:
                         {
+                            notesarray = new JSONArray(result);
+
                             for(int i = 0; i <notesarray.length() ; i++)
                             {
                                 JSONObject names = notesarray.getJSONObject(i);

@@ -96,7 +96,7 @@ public class ClientConcernedAdmissionPage extends AppCompatActivity {
         String[] data = new String[1];
         data[0] = username;
 
-        PutData putData = new PutData("http://bopps2130.net/getconcernedpatientclinican.php", "POST", field, data);
+        PutData putData = new PutData("http://uphill-leaper.000webhostapp.com/getconcernedpatientclinican.php", "POST", field, data);
         if (putData.startPut())
         {
             if (putData.onComplete())
